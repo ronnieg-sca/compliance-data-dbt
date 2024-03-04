@@ -1,4 +1,4 @@
 
 target/
 dbt_packages/
-logs/
+/Users/ronnieg/Development/sca-dbt/logs
