@@ -310,3 +310,85 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m16:28:04.730129 [debug] [MainThread]: Connection 'debug' was properly closed.
 [0m16:28:04.731136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1040ff8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104673e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100184710>]}
 [0m16:28:04.732252 [debug] [MainThread]: Flushing usage events
+[0m16:39:12.061771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067ec310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10704fb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10704fc90>]}
+
+
+============================== 16:39:12.063931 | 0a4146ff-df42-4d7d-ace6-170579d94e85 ==============================
+[0m16:39:12.063931 [info ] [MainThread]: Running with dbt=1.7.9
+[0m16:39:12.064324 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/ronnieg/Development/sca-dbt/logs', 'version_check': 'True', 'profiles_dir': '/Users/ronnieg/Development/sca-dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:39:12.222877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0a4146ff-df42-4d7d-ace6-170579d94e85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1103ac190>]}
+[0m16:39:12.260534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0a4146ff-df42-4d7d-ace6-170579d94e85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11023d350>]}
+[0m16:39:12.260999 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m16:39:12.268756 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m16:39:12.286862 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m16:39:12.287256 [debug] [MainThread]: Partial parsing: added file: sca_dbt://models/sources.yml
+[0m16:39:12.287498 [debug] [MainThread]: Partial parsing: added file: sca_dbt://models/staging/stg_pos_cases.sql
+[0m16:39:12.407480 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.sca_dbt.example
+[0m16:39:12.410332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0a4146ff-df42-4d7d-ace6-170579d94e85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a302d0>]}
+[0m16:39:12.416244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0a4146ff-df42-4d7d-ace6-170579d94e85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11056a290>]}
+[0m16:39:12.416535 [info ] [MainThread]: Found 1 model, 1 source, 0 exposures, 0 metrics, 430 macros, 0 groups, 0 semantic models
+[0m16:39:12.416780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0a4146ff-df42-4d7d-ace6-170579d94e85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1020b0290>]}
+[0m16:39:12.417520 [info ] [MainThread]: 
+[0m16:39:12.417977 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m16:39:12.418604 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_personal_ronnieg'
+[0m16:39:12.425073 [debug] [ThreadPool]: Using snowflake connection "list_personal_ronnieg"
+[0m16:39:12.425314 [debug] [ThreadPool]: On list_personal_ronnieg: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "sca_dbt", "target_name": "dev", "connection_name": "list_personal_ronnieg"} */
+show terse schemas in database personal_ronnieg
+    limit 10000
+[0m16:39:12.425518 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:39:13.145352 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 1.0 seconds
+[0m16:39:13.149086 [debug] [ThreadPool]: On list_personal_ronnieg: Close
+[0m16:39:13.387724 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_personal_ronnieg, now list_personal_ronnieg_dbt_staging)
+[0m16:39:13.398306 [debug] [ThreadPool]: Using snowflake connection "list_personal_ronnieg_dbt_staging"
+[0m16:39:13.398838 [debug] [ThreadPool]: On list_personal_ronnieg_dbt_staging: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "sca_dbt", "target_name": "dev", "connection_name": "list_personal_ronnieg_dbt_staging"} */
+show terse objects in personal_ronnieg.dbt_staging limit 10000
+[0m16:39:13.399267 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:39:14.055211 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.0 seconds
+[0m16:39:14.059140 [debug] [ThreadPool]: On list_personal_ronnieg_dbt_staging: Close
+[0m16:39:14.313457 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0a4146ff-df42-4d7d-ace6-170579d94e85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110285d50>]}
+[0m16:39:14.315318 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:39:14.316055 [info ] [MainThread]: 
+[0m16:39:14.321316 [debug] [Thread-1 (]: Began running node model.sca_dbt.stg_pos_cases
+[0m16:39:14.322039 [info ] [Thread-1 (]: 1 of 1 START sql view model dbt_staging.stg_pos_cases .......................... [RUN]
+[0m16:39:14.322945 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_personal_ronnieg_dbt_staging, now model.sca_dbt.stg_pos_cases)
+[0m16:39:14.323462 [debug] [Thread-1 (]: Began compiling node model.sca_dbt.stg_pos_cases
+[0m16:39:14.331431 [debug] [Thread-1 (]: Writing injected SQL for node "model.sca_dbt.stg_pos_cases"
+[0m16:39:14.332921 [debug] [Thread-1 (]: Timing info for model.sca_dbt.stg_pos_cases (compile): 16:39:14.323802 => 16:39:14.332676
+[0m16:39:14.333372 [debug] [Thread-1 (]: Began executing node model.sca_dbt.stg_pos_cases
+[0m16:39:14.356766 [debug] [Thread-1 (]: Writing runtime sql for node "model.sca_dbt.stg_pos_cases"
+[0m16:39:14.357885 [debug] [Thread-1 (]: Using snowflake connection "model.sca_dbt.stg_pos_cases"
+[0m16:39:14.358215 [debug] [Thread-1 (]: On model.sca_dbt.stg_pos_cases: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "sca_dbt", "target_name": "dev", "node_id": "model.sca_dbt.stg_pos_cases"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_pos_cases
+  
+   as (
+    with pos_cases_source as (
+    select * from app_compliance.seller.pos_cases
+)
+select
+    case_token,
+    queue
+from
+    pos_cases_source
+  );
+[0m16:39:14.358515 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:39:15.059122 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m16:39:15.078966 [debug] [Thread-1 (]: Timing info for model.sca_dbt.stg_pos_cases (execute): 16:39:14.333626 => 16:39:15.078744
+[0m16:39:15.079527 [debug] [Thread-1 (]: On model.sca_dbt.stg_pos_cases: Close
+[0m16:39:15.303736 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0a4146ff-df42-4d7d-ace6-170579d94e85', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1106beb90>]}
+[0m16:39:15.305403 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dbt_staging.stg_pos_cases ..................... [[32mSUCCESS 1[0m in 0.98s]
+[0m16:39:15.306295 [debug] [Thread-1 (]: Finished running node model.sca_dbt.stg_pos_cases
+[0m16:39:15.308506 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:39:15.309117 [debug] [MainThread]: Connection 'model.sca_dbt.stg_pos_cases' was properly closed.
+[0m16:39:15.309623 [info ] [MainThread]: 
+[0m16:39:15.310152 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.89 seconds (2.89s).
+[0m16:39:15.310980 [debug] [MainThread]: Command end result
+[0m16:39:15.321220 [info ] [MainThread]: 
+[0m16:39:15.321714 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:39:15.322093 [info ] [MainThread]: 
+[0m16:39:15.322477 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:39:15.323822 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.3004177, "process_user_time": 1.403956, "process_kernel_time": 0.162826, "process_mem_max_rss": "136511488", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:39:15.324354 [debug] [MainThread]: Command `dbt run` succeeded at 16:39:15.324229 after 3.30 seconds
+[0m16:39:15.324766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061b3710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107071b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1007c8710>]}
+[0m16:39:15.325175 [debug] [MainThread]: Flushing usage events

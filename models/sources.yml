@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: app_compliance
+    database: app_compliance
+    schema: seller
+    tables:
+      - name: pos_cases
