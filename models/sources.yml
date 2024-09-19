@@ -1,8 +1,11 @@
 version: 2
 
 sources:
-  - name: app_compliance
-    database: app_compliance
-    schema: seller
+  - name: merchantcomphub
+    database: merchantcomp_hub
+    schema: raw_oltp
     tables:
-      - name: pos_cases
+      - name: qc_decision
+	  - name: qc_dispute
+	  - name: qc_question_answer
+	  - name: qc_decision_followup
