@@ -4,3 +4,4 @@ dbt_packages/
 sca-dbt/logs/
 .user.yml
 /Users/ronnieg/Development/compliance-data-dbt/logs
+/Users/ronnieg/Development/compliance-data-dbt/logs/dbt.log
