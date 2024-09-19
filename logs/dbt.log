@@ -392,3 +392,29 @@ from
 [0m16:39:15.324354 [debug] [MainThread]: Command `dbt run` succeeded at 16:39:15.324229 after 3.30 seconds
 [0m16:39:15.324766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061b3710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107071b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1007c8710>]}
 [0m16:39:15.325175 [debug] [MainThread]: Flushing usage events
+[0m15:45:16.291536 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113f668d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113fd85d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113fd9450>]}
+
+
+============================== 15:45:16.294438 | 33dc398f-343f-4ff9-8f4f-74427d466c3e ==============================
+[0m15:45:16.294438 [info ] [MainThread]: Running with dbt=1.8.0
+[0m15:45:16.294790 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ronnieg/Development/sca-dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/ronnieg/Development/sca-dbt/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt ', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:45:16.353147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '33dc398f-343f-4ff9-8f4f-74427d466c3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113be6e50>]}
+[0m15:45:16.360161 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m15:45:16.360907 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m15:45:16.372308 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.12477408, "process_user_time": 0.585244, "process_kernel_time": 0.11812, "process_mem_max_rss": "99106816", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:45:16.372579 [debug] [MainThread]: Command `cli deps` succeeded at 15:45:16.372522 after 0.13 seconds
+[0m15:45:16.372805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113fd93d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113fb3750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113fb2e10>]}
+[0m15:45:16.373012 [debug] [MainThread]: Flushing usage events
+[0m15:50:46.144715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c3bdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c8ec90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cbba90>]}
+
+
+============================== 15:50:46.147268 | 7b99da80-f76e-4ba1-a9d9-c25f4a418d2d ==============================
+[0m15:50:46.147268 [info ] [MainThread]: Running with dbt=1.7.9
+[0m15:50:46.147673 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ronnieg/Development/sca-dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/ronnieg/Development/sca-dbt/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt deps', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:50:46.206017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7b99da80-f76e-4ba1-a9d9-c25f4a418d2d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103d2bbd0>]}
+[0m15:50:46.206553 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m15:50:46.209103 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m15:50:46.210104 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.09646829, "process_user_time": 0.901667, "process_kernel_time": 0.167281, "process_mem_max_rss": "105611264", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:50:46.210494 [debug] [MainThread]: Command `dbt deps` succeeded at 15:50:46.210384 after 0.10 seconds
+[0m15:50:46.210754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cbb790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067d5950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cd8510>]}
+[0m15:50:46.210996 [debug] [MainThread]: Flushing usage events
