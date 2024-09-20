@@ -1,4 +1,4 @@
-sca_dbt:
+compliance_data:
   target: dev
   outputs:
     dev:
@@ -14,12 +14,12 @@ sca_dbt:
       warehouse: ADHOC_LARGE # Snowflake warehouse name
       schema: dbt_staging
       threads: 4
-      client_session_keep_alive: False
+      client_session_keep_alive: True
       query_tag: dbt_test
 
       # optional
-      connect_retries: 0 # default 0
+      connect_retries: 3 # default 0
       connect_timeout: 10 # default: 10
-      retry_on_database_errors: False # default: false
+      retry_on_database_errors: True # default: false
       retry_all: False  # default: false
       reuse_connections: False # default: false

@@ -2,10 +2,10 @@ version: 2
 
 sources:
   - name: merchantcomphub
-    database: merchantcomp_hub
+    database: merchantcomphub
     schema: raw_oltp
     tables:
       - name: qc_decision
-	  - name: qc_dispute
-	  - name: qc_question_answer
-	  - name: qc_decision_followup
+      - name: qc_dispute
+      - name: qc_decision_followup
+      - name: qc_question_answer
