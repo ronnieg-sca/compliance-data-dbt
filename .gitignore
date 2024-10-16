@@ -5,3 +5,4 @@ sca-dbt/logs/dbt.log
 .user.yml
 /Users/ronnieg/Development/compliance-data-dbt/logs
 /Users/ronnieg/Development/compliance-data-dbt/logs/dbt.log
+logs/dbt.log
