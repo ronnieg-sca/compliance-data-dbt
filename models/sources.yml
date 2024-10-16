@@ -9,3 +9,4 @@ sources:
       - name: qc_dispute
       - name: qc_decision_followup
       - name: qc_question_answer
+	  - name: qc_decision_procedure_review
