@@ -1,7 +1,7 @@
 
 target/
 dbt_packages/
-sca-dbt/logs/
+sca-dbt/logs/dbt.log
 .user.yml
 /Users/ronnieg/Development/compliance-data-dbt/logs
 /Users/ronnieg/Development/compliance-data-dbt/logs/dbt.log
