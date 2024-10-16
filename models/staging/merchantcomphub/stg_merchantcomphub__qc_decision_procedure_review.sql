@@ -28,4 +28,3 @@ FROM
 	decision_procedure_review_source
 )
 SELECT * FROM final
-;

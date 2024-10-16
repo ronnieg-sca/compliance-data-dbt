@@ -2844,3 +2844,484 @@ SELECT * FROM final
 [0m13:11:52.257310 [debug] [MainThread]: Command `dbt run` succeeded at 13:11:52.257232 after 16.03 seconds
 [0m13:11:52.257668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105eb8f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e96650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100efe010>]}
 [0m13:11:52.257987 [debug] [MainThread]: Flushing usage events
+[0m13:19:23.191519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113907990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1139813d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113982e50>]}
+
+
+============================== 13:19:23.195313 | 06e77464-b405-4d68-b03a-1fcb52772d4a ==============================
+[0m13:19:23.195313 [info ] [MainThread]: Running with dbt=1.8.0
+[0m13:19:23.195705 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/ronnieg/Development/compliance-data-dbt/logs', 'debug': 'False', 'profiles_dir': '/Users/ronnieg/Development/compliance-data-dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:19:23.424556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '06e77464-b405-4d68-b03a-1fcb52772d4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1161d8410>]}
+[0m13:19:23.451945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '06e77464-b405-4d68-b03a-1fcb52772d4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1129f06d0>]}
+[0m13:19:23.452629 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m13:19:23.472891 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m13:19:23.565967 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+[0m13:19:23.566427 [debug] [MainThread]: Partial parsing: added file: compliance_data://models/staging/merchantcomphub/stg_merchantcomphub__qc_dispute.sql
+[0m13:19:23.566649 [debug] [MainThread]: Partial parsing: added file: compliance_data://models/staging/merchantcomphub/stg_merchantcomphub__qc_decision_followup.sql
+[0m13:19:23.566886 [debug] [MainThread]: Partial parsing: added file: compliance_data://models/staging/merchantcomphub/stg_merchantcomphub__qc_question_answer.sql
+[0m13:19:23.567130 [debug] [MainThread]: Partial parsing: added file: compliance_data://models/staging/merchantcomphub/stg_merchantcomphub__qc_decision_procedure_review.sql
+[0m13:19:23.707383 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.compliance_data.example
+[0m13:19:23.713862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '06e77464-b405-4d68-b03a-1fcb52772d4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11663be90>]}
+[0m13:19:23.769699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '06e77464-b405-4d68-b03a-1fcb52772d4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x116960910>]}
+[0m13:19:23.770078 [info ] [MainThread]: Found 5 models, 5 sources, 837 macros
+[0m13:19:23.770304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '06e77464-b405-4d68-b03a-1fcb52772d4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1165abb10>]}
+[0m13:19:23.771296 [info ] [MainThread]: 
+[0m13:19:23.771730 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:19:23.773941 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_personal_ronnieg'
+[0m13:19:23.781109 [debug] [ThreadPool]: Using snowflake connection "list_personal_ronnieg"
+[0m13:19:23.781366 [debug] [ThreadPool]: On list_personal_ronnieg: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "connection_name": "list_personal_ronnieg"} */
+show terse schemas in database personal_ronnieg
+    limit 10000
+[0m13:19:23.781561 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:19:24.835942 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 1.054 seconds
+[0m13:19:24.839785 [debug] [ThreadPool]: On list_personal_ronnieg: Close
+[0m13:19:25.255191 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_personal_ronnieg, now list_personal_ronnieg_dbt_staging)
+[0m13:19:25.263362 [debug] [ThreadPool]: Using snowflake connection "list_personal_ronnieg_dbt_staging"
+[0m13:19:25.263761 [debug] [ThreadPool]: On list_personal_ronnieg_dbt_staging: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "connection_name": "list_personal_ronnieg_dbt_staging"} */
+show objects in personal_ronnieg.dbt_staging limit 10000
+[0m13:19:25.264055 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:19:26.232087 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.968 seconds
+[0m13:19:26.234791 [debug] [ThreadPool]: On list_personal_ronnieg_dbt_staging: Close
+[0m13:19:26.563317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '06e77464-b405-4d68-b03a-1fcb52772d4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x116945d10>]}
+[0m13:19:26.564489 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:19:26.565263 [info ] [MainThread]: 
+[0m13:19:26.567523 [debug] [Thread-3 (]: Began running node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:19:26.567923 [debug] [Thread-4 (]: Began running node model.compliance_data.stg_merchantcomphub__qc_decision_followup
+[0m13:19:26.568318 [debug] [Thread-5 (]: Began running node model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review
+[0m13:19:26.568648 [debug] [Thread-6 (]: Began running node model.compliance_data.stg_merchantcomphub__qc_dispute
+[0m13:19:26.569071 [info ] [Thread-3 (]: 1 of 5 START sql view model dbt_staging.stg_merchantcomphub__qc_decision ....... [RUN]
+[0m13:19:26.570021 [info ] [Thread-4 (]: 2 of 5 START sql view model dbt_staging.stg_merchantcomphub__qc_decision_followup  [RUN]
+[0m13:19:26.570785 [info ] [Thread-5 (]: 3 of 5 START sql view model dbt_staging.stg_merchantcomphub__qc_decision_procedure_review  [RUN]
+[0m13:19:26.571444 [info ] [Thread-6 (]: 4 of 5 START sql view model dbt_staging.stg_merchantcomphub__qc_dispute ........ [RUN]
+[0m13:19:26.572056 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_personal_ronnieg_dbt_staging, now model.compliance_data.stg_merchantcomphub__qc_decision)
+[0m13:19:26.572606 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.compliance_data.stg_merchantcomphub__qc_decision_followup'
+[0m13:19:26.573578 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review'
+[0m13:19:26.574061 [debug] [Thread-6 (]: Acquiring new snowflake connection 'model.compliance_data.stg_merchantcomphub__qc_dispute'
+[0m13:19:26.574529 [debug] [Thread-3 (]: Began compiling node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:19:26.574892 [debug] [Thread-4 (]: Began compiling node model.compliance_data.stg_merchantcomphub__qc_decision_followup
+[0m13:19:26.575204 [debug] [Thread-5 (]: Began compiling node model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review
+[0m13:19:26.575509 [debug] [Thread-6 (]: Began compiling node model.compliance_data.stg_merchantcomphub__qc_dispute
+[0m13:19:26.582253 [debug] [Thread-3 (]: Writing injected SQL for node "model.compliance_data.stg_merchantcomphub__qc_decision"
+[0m13:19:26.584357 [debug] [Thread-4 (]: Writing injected SQL for node "model.compliance_data.stg_merchantcomphub__qc_decision_followup"
+[0m13:19:26.586245 [debug] [Thread-5 (]: Writing injected SQL for node "model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review"
+[0m13:19:26.588404 [debug] [Thread-6 (]: Writing injected SQL for node "model.compliance_data.stg_merchantcomphub__qc_dispute"
+[0m13:19:26.590017 [debug] [Thread-3 (]: Began executing node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:19:26.590379 [debug] [Thread-4 (]: Began executing node model.compliance_data.stg_merchantcomphub__qc_decision_followup
+[0m13:19:26.603334 [debug] [Thread-5 (]: Began executing node model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review
+[0m13:19:26.603674 [debug] [Thread-6 (]: Began executing node model.compliance_data.stg_merchantcomphub__qc_dispute
+[0m13:19:26.613798 [debug] [Thread-3 (]: Writing runtime sql for node "model.compliance_data.stg_merchantcomphub__qc_decision"
+[0m13:19:26.616286 [debug] [Thread-4 (]: Writing runtime sql for node "model.compliance_data.stg_merchantcomphub__qc_decision_followup"
+[0m13:19:26.618649 [debug] [Thread-5 (]: Writing runtime sql for node "model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review"
+[0m13:19:26.620831 [debug] [Thread-6 (]: Writing runtime sql for node "model.compliance_data.stg_merchantcomphub__qc_dispute"
+[0m13:19:26.622349 [debug] [Thread-4 (]: Using snowflake connection "model.compliance_data.stg_merchantcomphub__qc_decision_followup"
+[0m13:19:26.623044 [debug] [Thread-5 (]: Using snowflake connection "model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review"
+[0m13:19:26.623366 [debug] [Thread-4 (]: On model.compliance_data.stg_merchantcomphub__qc_decision_followup: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.stg_merchantcomphub__qc_decision_followup"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_merchantcomphub__qc_decision_followup
+  
+   as (
+    WITH column_transforms_and_renames AS (
+	SELECT
+	-- ids/tokens/keys
+		id as follow_up_action_id,
+		decision_id,
+
+	-- dates/timestamps
+		created_at AS follow_up_action_created_at,
+
+	-- booleans
+	-- measures
+
+	-- strings/varchars
+		agent_alias,
+
+	-- metadata
+		__cdc_create_timestamp,
+		__cdc_update_timestamp,
+		__db_name,
+		__deleted_upstream,
+		__entity_schema_name,
+	FROM 
+		merchantcomphub.raw_oltp.qc_decision_followup
+	WHERE
+		-- filters out QA test and sample data pre-launch date of Aug 1, 2024
+		follow_up_action_created_at::date >= '2024-08-01'
+),
+final AS (
+	SELECT
+		follow_up_action_id,
+		decision_id,
+		follow_up_action_created_at,
+		agent_alias,
+	FROM 
+		column_transforms_and_renames
+)
+SELECT * FROM final
+;
+[0m13:19:26.624623 [debug] [Thread-6 (]: Using snowflake connection "model.compliance_data.stg_merchantcomphub__qc_dispute"
+[0m13:19:26.626338 [debug] [Thread-3 (]: Using snowflake connection "model.compliance_data.stg_merchantcomphub__qc_decision"
+[0m13:19:26.626605 [debug] [Thread-5 (]: On model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_merchantcomphub__qc_decision_procedure_review
+  
+   as (
+    WITH decision_procedure_review_source AS (
+	SELECT * FROM merchantcomphub.raw_oltp.qc_decision_procedure_review
+),
+final AS (
+SELECT
+
+	-- ids/tokens/keys
+	id
+	, decision_id
+
+	-- dates/timestamps
+	, created_at
+
+	-- booleans
+	-- measures
+
+	-- strings/varchars
+	, agent_alias
+
+	-- metadata
+	, __cdc_create_timestamp
+	, __cdc_update_timestamp
+	, __db_name
+	, __entity_schema_name
+	, __deleted_upstream
+
+FROM
+	decision_procedure_review_source
+)
+SELECT * FROM final
+;
+[0m13:19:26.626887 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:19:26.627186 [debug] [Thread-6 (]: On model.compliance_data.stg_merchantcomphub__qc_dispute: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.stg_merchantcomphub__qc_dispute"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_merchantcomphub__qc_dispute
+  
+   as (
+    WITH column_transforms_and_renames AS (
+	SELECT
+	-- ids/tokens/keys
+		qc_dispute.id AS dispute_id,
+		qc_dispute.dispute_agent_id AS dispute_agent_registry_id,
+		qc_dispute.notary_case_id,
+		qc_dispute.target_id,
+		qc_dispute.target_qc_decision_id,
+
+	-- dates/timestamps
+		qc_dispute.created_at AS dispute_created_at,
+		qc_dispute.updated_at AS dispute_updated_at,
+
+	-- booleans
+
+	-- measures
+
+	-- strings/varchars
+		qc_dispute.additional_links,
+		qc_dispute.dispute_comment,
+		qc_dispute.dispute_agent_alias,
+		qc_dispute.dispute_agent_name,
+		qc_dispute.dispute_agent_team,
+		qc_dispute.feedback_answers AS feedback_answers_json,
+		qc_dispute.target_id_type,
+		qc_dispute.triage_agent_alias,
+		qc_dispute.triage_comment,
+		qc_dispute.triage_decision,
+
+	-- metadata
+		qc_dispute.__cdc_create_timestamp,
+		qc_dispute.__cdc_update_timestamp,
+		qc_dispute.__db_name,
+		qc_dispute.__deleted_upstream,
+		qc_dispute.__entity_schema_name
+		
+	FROM
+		merchantcomphub.raw_oltp.qc_dispute
+	WHERE
+		-- filters out QA test and sample data pre-launch date of Aug 1, 2024
+		dispute_created_at::date >= '2024-08-01'
+),
+final AS (
+	SELECT	
+		dispute_id,
+		dispute_agent_registry_id,
+		notary_case_id,
+		target_id,
+		target_qc_decision_id,
+		dispute_created_at,
+		dispute_updated_at,
+		additional_links,
+		dispute_comment,
+		dispute_agent_alias,
+		dispute_agent_name,
+		dispute_agent_team,
+		feedback_answers_json,
+		target_id_type,
+		triage_agent_alias,
+		triage_comment,
+		triage_decision,
+	FROM 
+		column_transforms_and_renames
+)
+SELECT * FROM final
+;
+[0m13:19:26.627637 [debug] [Thread-3 (]: On model.compliance_data.stg_merchantcomphub__qc_decision: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.stg_merchantcomphub__qc_decision"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_merchantcomphub__qc_decision
+  
+   as (
+    WITH column_transforms_and_renames AS (
+	SELECT
+	-- ids/tokens/keys
+		id AS decision_id,
+		assignment_id,
+		notary_case_id,
+		ops_agent_id AS ops_agent_registry_id,
+		qc_agent_id AS qc_agent_registry_id,
+		target_id,
+		target_qc_dispute_id,
+		unit_token,
+
+	-- dates/timestamps
+		ops_agent_action_time AS ops_agent_action_at, -- AS actioned_time in current app_comp_qc.view LookML,
+		created_at AS decision_created_at,
+		updated_at AS decision_updated_at,
+
+	-- booleans
+		follow_up_required AS is_agent_follow_up_required,
+		procedure_review AS is_procedure_review,
+		sample_testing_or_training AS is_sample_testing_or_training,
+
+	-- measures
+		qc_score,
+
+	-- strings/varchars
+		amlrs_agent_location,
+		country_code,	
+		ops_agent_action, -- AS agent_action in current app_comp_qc.view LookML,
+		ops_agent_name,
+		ops_agent_team, -- AS agent_team in current app_comp_qc.view LookML,
+		qc_comment, -- AS comment in current app_comp_qc.view LookML,
+		qc_agent_alias,
+		qc_agent_name,
+		qc_note,
+		qc_team,
+		queue_slug as qc_queue,
+		CASE WHEN qc_queue ILIKE 'square_amlrs%' THEN TRUE ELSE FALSE END AS is_amlrs,
+		REPLACE(qc_queue, 'square_quality_control_') AS qc_case_queue_category,
+		CASE
+			WHEN product ILIKE '%payroll%' THEN 'Payroll'
+			WHEN product ILIKE '%cash%' THEN 'Cash'
+			WHEN product ILIKE '%BTC%' THEN 'Cash'
+			WHEN REGEXP_LIKE(unit_token, '(C_).*') THEN 'Cash'
+			WHEN product ILIKE '%capital%' THEN 'Capital'
+			WHEN product ILIKE '%seller%' THEN 'POS'
+		END AS product,
+		smr_typology,
+		sar_typology,
+		sfs_account_type,
+		target_id_type,
+		target_queue_slug AS ops_queue,
+		procedure_review_comment,	
+
+	-- metadata
+		__cdc_create_timestamp,
+		__cdc_update_timestamp,
+		__db_name,
+		__entity_schema_name,
+		__deleted_upstream
+
+	FROM 
+		merchantcomphub.raw_oltp.qc_decision
+	WHERE
+		-- filters out non-AMLRS QA test and sample data pre-launch date of Aug 1, 2024
+		(decision_created_at::date >= '2024-08-01')
+	OR
+		-- filters out AMLRS QA test and sample data pre-launch date of Sep 1, 2024
+		(qc_team = 'AMLRS QC' AND decision_created_at::date >= '2024-09-01')
+
+),
+final AS (
+	SELECT
+		decision_id,
+		assignment_id,
+		notary_case_id,
+		ops_agent_registry_id,
+		qc_agent_registry_id,
+		target_id,
+		target_qc_dispute_id,
+		unit_token,
+		ops_agent_action_at,
+		decision_created_at,
+		decision_updated_at,
+		is_agent_follow_up_required,
+		is_procedure_review,
+		is_sample_testing_or_training,
+		qc_score,
+		amlrs_agent_location,
+		country_code,	
+		ops_agent_action,
+		ops_agent_name,
+		ops_agent_team,
+		qc_comment,
+		qc_agent_alias,
+		qc_agent_name,
+		qc_team,
+		qc_note,
+		qc_queue,
+		qc_case_queue_category,
+		product,
+		smr_typology,
+		sar_typology,
+		sfs_account_type,
+		target_id_type,
+		ops_queue,
+		procedure_review_comment,
+	FROM
+		column_transforms_and_renames
+)
+SELECT * FROM final
+  );
+[0m13:19:26.628034 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m13:19:26.628440 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m13:19:26.628742 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:19:27.675360 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01b7bb8f-080d-372f-0015-c10c3c5f32cf
+[0m13:19:27.675925 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 41 at position 0 unexpected ';'.
+[0m13:19:27.676711 [debug] [Thread-4 (]: On model.compliance_data.stg_merchantcomphub__qc_decision_followup: Close
+[0m13:19:27.793957 [debug] [Thread-5 (]: Snowflake adapter: Snowflake query id: 01b7bb8f-080d-30f9-0015-c10c3c5e4c57
+[0m13:19:27.795096 [debug] [Thread-5 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 34 at position 0 unexpected ';'.
+[0m13:19:27.795946 [debug] [Thread-5 (]: On model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review: Close
+[0m13:19:27.934963 [debug] [Thread-6 (]: Snowflake adapter: Snowflake query id: 01b7bb8f-080d-3731-0015-c10c3c5eb6f7
+[0m13:19:27.935960 [debug] [Thread-6 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 69 at position 0 unexpected ';'.
+[0m13:19:27.937054 [debug] [Thread-6 (]: On model.compliance_data.stg_merchantcomphub__qc_dispute: Close
+[0m13:19:28.029070 [debug] [Thread-4 (]: Database Error in model stg_merchantcomphub__qc_decision_followup (models/staging/merchantcomphub/stg_merchantcomphub__qc_decision_followup.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 41 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/staging/merchantcomphub/stg_merchantcomphub__qc_decision_followup.sql
+[0m13:19:28.030933 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '06e77464-b405-4d68-b03a-1fcb52772d4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1161f4990>]}
+[0m13:19:28.031762 [error] [Thread-4 (]: 2 of 5 ERROR creating sql view model dbt_staging.stg_merchantcomphub__qc_decision_followup  [[31mERROR[0m in 1.46s]
+[0m13:19:28.032465 [debug] [Thread-4 (]: Finished running node model.compliance_data.stg_merchantcomphub__qc_decision_followup
+[0m13:19:28.032940 [debug] [Thread-4 (]: Began running node model.compliance_data.stg_merchantcomphub__qc_question_answer
+[0m13:19:28.034170 [info ] [Thread-4 (]: 5 of 5 START sql view model dbt_staging.stg_merchantcomphub__qc_question_answer  [RUN]
+[0m13:19:28.035157 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.compliance_data.stg_merchantcomphub__qc_decision_followup, now model.compliance_data.stg_merchantcomphub__qc_question_answer)
+[0m13:19:28.035687 [debug] [Thread-4 (]: Began compiling node model.compliance_data.stg_merchantcomphub__qc_question_answer
+[0m13:19:28.038940 [debug] [Thread-4 (]: Writing injected SQL for node "model.compliance_data.stg_merchantcomphub__qc_question_answer"
+[0m13:19:28.041363 [debug] [Thread-4 (]: Began executing node model.compliance_data.stg_merchantcomphub__qc_question_answer
+[0m13:19:28.044876 [debug] [Thread-4 (]: Writing runtime sql for node "model.compliance_data.stg_merchantcomphub__qc_question_answer"
+[0m13:19:28.046514 [debug] [Thread-4 (]: Using snowflake connection "model.compliance_data.stg_merchantcomphub__qc_question_answer"
+[0m13:19:28.046977 [debug] [Thread-4 (]: On model.compliance_data.stg_merchantcomphub__qc_question_answer: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.stg_merchantcomphub__qc_question_answer"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_merchantcomphub__qc_question_answer
+  
+   as (
+    WITH column_transforms_and_renames AS (
+	SELECT
+	-- ids/tokens/keys
+		qc_decision_id AS decision_id,
+		qc_question_id AS question_id,
+
+	-- dates/timestamps
+		created_at AS question_created_at,
+		updated_at AS question_updated_at,
+
+	-- booleans
+
+	-- measures
+		points,
+
+	-- strings/varchars
+		answer,
+		keyword,
+
+	-- metadata
+		__cdc_create_timestamp,
+		__cdc_update_timestamp,
+		__db_name,
+		__deleted_upstream,
+		__entity_schema_name,
+	FROM 
+		merchantcomphub.raw_oltp.qc_question_answer
+),
+final AS (
+	SELECT
+		decision_id,
+		question_id,
+		question_created_at,
+		question_updated_at,
+		points,
+		answer,
+		keyword,
+	FROM 
+		column_transforms_and_renames
+)
+SELECT * FROM final
+;
+[0m13:19:28.047485 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:19:28.267676 [debug] [Thread-6 (]: Database Error in model stg_merchantcomphub__qc_dispute (models/staging/merchantcomphub/stg_merchantcomphub__qc_dispute.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 69 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/staging/merchantcomphub/stg_merchantcomphub__qc_dispute.sql
+[0m13:19:28.268402 [debug] [Thread-6 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '06e77464-b405-4d68-b03a-1fcb52772d4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1175aed50>]}
+[0m13:19:28.269007 [error] [Thread-6 (]: 4 of 5 ERROR creating sql view model dbt_staging.stg_merchantcomphub__qc_dispute  [[31mERROR[0m in 1.69s]
+[0m13:19:28.269529 [debug] [Thread-6 (]: Finished running node model.compliance_data.stg_merchantcomphub__qc_dispute
+[0m13:19:28.325727 [debug] [Thread-5 (]: Database Error in model stg_merchantcomphub__qc_decision_procedure_review (models/staging/merchantcomphub/stg_merchantcomphub__qc_decision_procedure_review.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 34 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/staging/merchantcomphub/stg_merchantcomphub__qc_decision_procedure_review.sql
+[0m13:19:28.326329 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '06e77464-b405-4d68-b03a-1fcb52772d4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113933f50>]}
+[0m13:19:28.326914 [error] [Thread-5 (]: 3 of 5 ERROR creating sql view model dbt_staging.stg_merchantcomphub__qc_decision_procedure_review  [[31mERROR[0m in 1.75s]
+[0m13:19:28.327457 [debug] [Thread-5 (]: Finished running node model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review
+[0m13:19:28.421171 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.792 seconds
+[0m13:19:28.440609 [debug] [Thread-3 (]: On model.compliance_data.stg_merchantcomphub__qc_decision: Close
+[0m13:19:28.788610 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '06e77464-b405-4d68-b03a-1fcb52772d4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113827a10>]}
+[0m13:19:28.789423 [info ] [Thread-3 (]: 1 of 5 OK created sql view model dbt_staging.stg_merchantcomphub__qc_decision .. [[32mSUCCESS 1[0m in 2.22s]
+[0m13:19:28.789979 [debug] [Thread-3 (]: Finished running node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:19:29.160290 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01b7bb8f-080d-372f-0015-c10c3c5f32fb
+[0m13:19:29.161426 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 45 at position 0 unexpected ';'.
+[0m13:19:29.162287 [debug] [Thread-4 (]: On model.compliance_data.stg_merchantcomphub__qc_question_answer: Close
+[0m13:19:29.692715 [debug] [Thread-4 (]: Database Error in model stg_merchantcomphub__qc_question_answer (models/staging/merchantcomphub/stg_merchantcomphub__qc_question_answer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 45 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/staging/merchantcomphub/stg_merchantcomphub__qc_question_answer.sql
+[0m13:19:29.693398 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '06e77464-b405-4d68-b03a-1fcb52772d4a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117724cd0>]}
+[0m13:19:29.694006 [error] [Thread-4 (]: 5 of 5 ERROR creating sql view model dbt_staging.stg_merchantcomphub__qc_question_answer  [[31mERROR[0m in 1.66s]
+[0m13:19:29.694551 [debug] [Thread-4 (]: Finished running node model.compliance_data.stg_merchantcomphub__qc_question_answer
+[0m13:19:29.695945 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:19:29.696397 [debug] [MainThread]: Connection 'model.compliance_data.stg_merchantcomphub__qc_decision' was properly closed.
+[0m13:19:29.696701 [debug] [MainThread]: Connection 'model.compliance_data.stg_merchantcomphub__qc_question_answer' was properly closed.
+[0m13:19:29.697052 [debug] [MainThread]: Connection 'model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review' was properly closed.
+[0m13:19:29.697365 [debug] [MainThread]: Connection 'model.compliance_data.stg_merchantcomphub__qc_dispute' was properly closed.
+[0m13:19:29.697752 [info ] [MainThread]: 
+[0m13:19:29.698090 [info ] [MainThread]: Finished running 5 view models in 0 hours 0 minutes and 5.93 seconds (5.93s).
+[0m13:19:29.699079 [debug] [MainThread]: Command end result
+[0m13:19:29.737040 [info ] [MainThread]: 
+[0m13:19:29.737455 [info ] [MainThread]: [31mCompleted with 4 errors and 0 warnings:[0m
+[0m13:19:29.737712 [info ] [MainThread]: 
+[0m13:19:29.738023 [error] [MainThread]:   Database Error in model stg_merchantcomphub__qc_decision_followup (models/staging/merchantcomphub/stg_merchantcomphub__qc_decision_followup.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 41 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/staging/merchantcomphub/stg_merchantcomphub__qc_decision_followup.sql
+[0m13:19:29.738269 [info ] [MainThread]: 
+[0m13:19:29.738535 [error] [MainThread]:   Database Error in model stg_merchantcomphub__qc_dispute (models/staging/merchantcomphub/stg_merchantcomphub__qc_dispute.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 69 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/staging/merchantcomphub/stg_merchantcomphub__qc_dispute.sql
+[0m13:19:29.738759 [info ] [MainThread]: 
+[0m13:19:29.739154 [error] [MainThread]:   Database Error in model stg_merchantcomphub__qc_decision_procedure_review (models/staging/merchantcomphub/stg_merchantcomphub__qc_decision_procedure_review.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 34 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/staging/merchantcomphub/stg_merchantcomphub__qc_decision_procedure_review.sql
+[0m13:19:29.739452 [info ] [MainThread]: 
+[0m13:19:29.739778 [error] [MainThread]:   Database Error in model stg_merchantcomphub__qc_question_answer (models/staging/merchantcomphub/stg_merchantcomphub__qc_question_answer.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 45 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/staging/merchantcomphub/stg_merchantcomphub__qc_question_answer.sql
+[0m13:19:29.740058 [info ] [MainThread]: 
+[0m13:19:29.740303 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=4 SKIP=0 TOTAL=5
+[0m13:19:29.741528 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 6.590762, "process_user_time": 1.585173, "process_kernel_time": 0.30883, "process_mem_max_rss": "149078016", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:19:29.741912 [debug] [MainThread]: Command `dbt run` failed at 13:19:29.741859 after 6.59 seconds
+[0m13:19:29.742211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113955e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113957510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e95110>]}
+[0m13:19:29.742473 [debug] [MainThread]: Flushing usage events

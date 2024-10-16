@@ -35,4 +35,3 @@ final AS (
 		column_transforms_and_renames
 )
 SELECT * FROM final
-;
