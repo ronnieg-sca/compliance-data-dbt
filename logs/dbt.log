@@ -2628,3 +2628,219 @@ SELECT * FROM final
 [0m17:06:54.756537 [debug] [MainThread]: Command `dbt run` failed at 17:06:54.756486 after 5.27 seconds
 [0m17:06:54.756817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104975e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104975d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100b99810>]}
 [0m17:06:54.757063 [debug] [MainThread]: Flushing usage events
+[0m13:11:02.576087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a074d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a815d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a83050>]}
+
+
+============================== 13:11:02.579888 | 1e2e63ce-b986-41a5-981b-e3fb272ed91b ==============================
+[0m13:11:02.579888 [info ] [MainThread]: Running with dbt=1.8.0
+[0m13:11:02.580290 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ronnieg/Development/compliance-data-dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/ronnieg/Development/compliance-data-dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:11:03.119352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1e2e63ce-b986-41a5-981b-e3fb272ed91b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a56990>]}
+[0m13:11:03.145598 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1e2e63ce-b986-41a5-981b-e3fb272ed91b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084a9fd0>]}
+[0m13:11:03.146385 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m13:11:03.172744 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m13:11:03.196519 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m13:11:03.196871 [info ] [MainThread]: Unable to do partial parsing because a project dependency has been added
+[0m13:11:03.197110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1e2e63ce-b986-41a5-981b-e3fb272ed91b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107621990>]}
+[0m13:11:03.201656 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading compliance_data: sources.yml - Runtime Error
+    Syntax error near line 12
+    ------------------------------
+    9  |       - name: qc_dispute
+    10 |       - name: qc_decision_followup
+    11 |       - name: qc_question_answer
+    12 | 	  - name: qc_decision_procedure_review
+    
+    Raw Error:
+    ------------------------------
+    while scanning a plain scalar
+      in "<unicode string>", line 11, column 15
+    found a tab character that violates indentation
+      in "<unicode string>", line 12, column 1
+[0m13:11:03.213935 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.675845, "process_user_time": 0.861526, "process_kernel_time": 0.216825, "process_mem_max_rss": "124715008", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:11:03.214393 [debug] [MainThread]: Command `dbt run` failed at 13:11:03.214342 after 0.68 seconds
+[0m13:11:03.214664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cf59d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cf5110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b9a90d0>]}
+[0m13:11:03.214886 [debug] [MainThread]: Flushing usage events
+[0m13:11:36.264080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e42d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105eb9090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ebaad0>]}
+
+
+============================== 13:11:36.267353 | 26f2ff4a-3c3d-4603-a731-cd1a29117c46 ==============================
+[0m13:11:36.267353 [info ] [MainThread]: Running with dbt=1.8.0
+[0m13:11:36.267740 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ronnieg/Development/compliance-data-dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/ronnieg/Development/compliance-data-dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:11:36.491327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '26f2ff4a-3c3d-4603-a731-cd1a29117c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ecb410>]}
+[0m13:11:36.518199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '26f2ff4a-3c3d-4603-a731-cd1a29117c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109972810>]}
+[0m13:11:36.518934 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m13:11:36.539496 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m13:11:36.564172 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m13:11:36.564572 [info ] [MainThread]: Unable to do partial parsing because a project dependency has been added
+[0m13:11:36.564892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '26f2ff4a-3c3d-4603-a731-cd1a29117c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045dd910>]}
+[0m13:11:37.520117 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.compliance_data.example
+[0m13:11:37.526310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '26f2ff4a-3c3d-4603-a731-cd1a29117c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a7a750>]}
+[0m13:11:37.617907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '26f2ff4a-3c3d-4603-a731-cd1a29117c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ba6e10>]}
+[0m13:11:37.618242 [info ] [MainThread]: Found 1 model, 5 sources, 837 macros
+[0m13:11:37.618459 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '26f2ff4a-3c3d-4603-a731-cd1a29117c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b0f71d0>]}
+[0m13:11:37.619337 [info ] [MainThread]: 
+[0m13:11:37.619688 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:11:37.620179 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_personal_ronnieg'
+[0m13:11:37.627918 [debug] [ThreadPool]: Using snowflake connection "list_personal_ronnieg"
+[0m13:11:37.628197 [debug] [ThreadPool]: On list_personal_ronnieg: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "connection_name": "list_personal_ronnieg"} */
+show terse schemas in database personal_ronnieg
+    limit 10000
+[0m13:11:37.628381 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:11:48.136510 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 10.508 seconds
+[0m13:11:48.141114 [debug] [ThreadPool]: On list_personal_ronnieg: Close
+[0m13:11:48.527216 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_personal_ronnieg, now list_personal_ronnieg_dbt_staging)
+[0m13:11:48.533412 [debug] [ThreadPool]: Using snowflake connection "list_personal_ronnieg_dbt_staging"
+[0m13:11:48.533635 [debug] [ThreadPool]: On list_personal_ronnieg_dbt_staging: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "connection_name": "list_personal_ronnieg_dbt_staging"} */
+show objects in personal_ronnieg.dbt_staging limit 10000
+[0m13:11:48.533823 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:11:49.513336 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.979 seconds
+[0m13:11:49.516510 [debug] [ThreadPool]: On list_personal_ronnieg_dbt_staging: Close
+[0m13:11:49.868198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '26f2ff4a-3c3d-4603-a731-cd1a29117c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109cbf3d0>]}
+[0m13:11:49.870015 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:11:49.870925 [info ] [MainThread]: 
+[0m13:11:49.875728 [debug] [Thread-3 (]: Began running node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:11:49.876644 [info ] [Thread-3 (]: 1 of 1 START sql view model dbt_staging.stg_merchantcomphub__qc_decision ....... [RUN]
+[0m13:11:49.877569 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_personal_ronnieg_dbt_staging, now model.compliance_data.stg_merchantcomphub__qc_decision)
+[0m13:11:49.878134 [debug] [Thread-3 (]: Began compiling node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:11:49.885316 [debug] [Thread-3 (]: Writing injected SQL for node "model.compliance_data.stg_merchantcomphub__qc_decision"
+[0m13:11:49.886664 [debug] [Thread-3 (]: Began executing node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:11:49.907779 [debug] [Thread-3 (]: Writing runtime sql for node "model.compliance_data.stg_merchantcomphub__qc_decision"
+[0m13:11:49.910925 [debug] [Thread-3 (]: Using snowflake connection "model.compliance_data.stg_merchantcomphub__qc_decision"
+[0m13:11:49.911536 [debug] [Thread-3 (]: On model.compliance_data.stg_merchantcomphub__qc_decision: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.stg_merchantcomphub__qc_decision"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_merchantcomphub__qc_decision
+  
+   as (
+    WITH column_transforms_and_renames AS (
+	SELECT
+	-- ids/tokens/keys
+		id AS decision_id,
+		assignment_id,
+		notary_case_id,
+		ops_agent_id AS ops_agent_registry_id,
+		qc_agent_id AS qc_agent_registry_id,
+		target_id,
+		target_qc_dispute_id,
+		unit_token,
+
+	-- dates/timestamps
+		ops_agent_action_time AS ops_agent_action_at, -- AS actioned_time in current app_comp_qc.view LookML,
+		created_at AS decision_created_at,
+		updated_at AS decision_updated_at,
+
+	-- booleans
+		follow_up_required AS is_agent_follow_up_required,
+		procedure_review AS is_procedure_review,
+		sample_testing_or_training AS is_sample_testing_or_training,
+
+	-- measures
+		qc_score,
+
+	-- strings/varchars
+		amlrs_agent_location,
+		country_code,	
+		ops_agent_action, -- AS agent_action in current app_comp_qc.view LookML,
+		ops_agent_name,
+		ops_agent_team, -- AS agent_team in current app_comp_qc.view LookML,
+		qc_comment, -- AS comment in current app_comp_qc.view LookML,
+		qc_agent_alias,
+		qc_agent_name,
+		qc_note,
+		qc_team,
+		queue_slug as qc_queue,
+		CASE WHEN qc_queue ILIKE 'square_amlrs%' THEN TRUE ELSE FALSE END AS is_amlrs,
+		REPLACE(qc_queue, 'square_quality_control_') AS qc_case_queue_category,
+		CASE
+			WHEN product ILIKE '%payroll%' THEN 'Payroll'
+			WHEN product ILIKE '%cash%' THEN 'Cash'
+			WHEN product ILIKE '%BTC%' THEN 'Cash'
+			WHEN REGEXP_LIKE(unit_token, '(C_).*') THEN 'Cash'
+			WHEN product ILIKE '%capital%' THEN 'Capital'
+			WHEN product ILIKE '%seller%' THEN 'POS'
+		END AS product,
+		smr_typology,
+		sar_typology,
+		sfs_account_type,
+		target_id_type,
+		target_queue_slug AS ops_queue,
+		procedure_review_comment,	
+
+	-- metadata
+		__cdc_create_timestamp,
+		__cdc_update_timestamp,
+		__db_name,
+		__entity_schema_name,
+		__deleted_upstream
+
+	FROM 
+		merchantcomphub.raw_oltp.qc_decision
+	WHERE
+		-- filters out non-AMLRS QA test and sample data pre-launch date of Aug 1, 2024
+		(decision_created_at::date >= '2024-08-01')
+	OR
+		-- filters out AMLRS QA test and sample data pre-launch date of Sep 1, 2024
+		(qc_team = 'AMLRS QC' AND decision_created_at::date >= '2024-09-01')
+
+),
+final AS (
+	SELECT
+		decision_id,
+		assignment_id,
+		notary_case_id,
+		ops_agent_registry_id,
+		qc_agent_registry_id,
+		target_id,
+		target_qc_dispute_id,
+		unit_token,
+		ops_agent_action_at,
+		decision_created_at,
+		decision_updated_at,
+		is_agent_follow_up_required,
+		is_procedure_review,
+		is_sample_testing_or_training,
+		qc_score,
+		amlrs_agent_location,
+		country_code,	
+		ops_agent_action,
+		ops_agent_name,
+		ops_agent_team,
+		qc_comment,
+		qc_agent_alias,
+		qc_agent_name,
+		qc_team,
+		qc_note,
+		qc_queue,
+		qc_case_queue_category,
+		product,
+		smr_typology,
+		sar_typology,
+		sfs_account_type,
+		target_id_type,
+		ops_queue,
+		procedure_review_comment,
+	FROM
+		column_transforms_and_renames
+)
+SELECT * FROM final
+  );
+[0m13:11:49.911972 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:11:51.869728 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.957 seconds
+[0m13:11:51.892884 [debug] [Thread-3 (]: On model.compliance_data.stg_merchantcomphub__qc_decision: Close
+[0m13:11:52.215187 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '26f2ff4a-3c3d-4603-a731-cd1a29117c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1040cb950>]}
+[0m13:11:52.216607 [info ] [Thread-3 (]: 1 of 1 OK created sql view model dbt_staging.stg_merchantcomphub__qc_decision .. [[32mSUCCESS 1[0m in 2.34s]
+[0m13:11:52.217547 [debug] [Thread-3 (]: Finished running node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:11:52.218875 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:11:52.219237 [debug] [MainThread]: Connection 'model.compliance_data.stg_merchantcomphub__qc_decision' was properly closed.
+[0m13:11:52.219528 [info ] [MainThread]: 
+[0m13:11:52.219827 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 14.60 seconds (14.60s).
+[0m13:11:52.220394 [debug] [MainThread]: Command end result
+[0m13:11:52.254429 [info ] [MainThread]: 
+[0m13:11:52.254936 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:11:52.255219 [info ] [MainThread]: 
+[0m13:11:52.255497 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m13:11:52.256804 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 16.03386, "process_user_time": 2.197918, "process_kernel_time": 0.368814, "process_mem_max_rss": "149684224", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:11:52.257310 [debug] [MainThread]: Command `dbt run` succeeded at 13:11:52.257232 after 16.03 seconds
+[0m13:11:52.257668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105eb8f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e96650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100efe010>]}
+[0m13:11:52.257987 [debug] [MainThread]: Flushing usage events
