@@ -140,4 +140,3 @@ FROM
 	qc_decision_case_details
 )
 SELECT * FROM final
-;

@@ -3762,3 +3762,1100 @@ SELECT * FROM final
 [0m13:20:30.916589 [debug] [MainThread]: Command `dbt run` succeeded at 13:20:30.916519 after 7.71 seconds
 [0m13:20:30.916933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b9a110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b78910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100eba010>]}
 [0m13:20:30.917224 [debug] [MainThread]: Flushing usage events
+[0m13:32:39.251143 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d07290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d7d390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d7e690>]}
+
+
+============================== 13:32:39.254450 | 10028fa0-25a0-43c4-9982-1b9c74cea387 ==============================
+[0m13:32:39.254450 [info ] [MainThread]: Running with dbt=1.8.0
+[0m13:32:39.254876 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ronnieg/Development/compliance-data-dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/ronnieg/Development/compliance-data-dbt/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:32:39.469575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3de610>]}
+[0m13:32:39.494783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084e5c10>]}
+[0m13:32:39.495428 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m13:32:39.514616 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m13:32:39.673969 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+[0m13:32:39.674419 [debug] [MainThread]: Partial parsing: added file: compliance_data://models/intermediate/quality assurance/quality_assurance_operations_agents_scored.sql
+[0m13:32:39.674626 [debug] [MainThread]: Partial parsing: added file: compliance_data://models/intermediate/quality assurance/square_quality_assurance_case_decision_scd.sql
+[0m13:32:39.674815 [debug] [MainThread]: Partial parsing: added file: compliance_data://models/intermediate/notary/square_notary_assignment_status_details.sql
+[0m13:32:39.674994 [debug] [MainThread]: Partial parsing: added file: compliance_data://models/marts/quality assurance/square_quality_assurance_case_details.sql
+[0m13:32:39.810671 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.compliance_data.example
+[0m13:32:39.817906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104186d10>]}
+[0m13:32:39.870918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc1b210>]}
+[0m13:32:39.871238 [info ] [MainThread]: Found 9 models, 5 sources, 837 macros
+[0m13:32:39.871453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ef2290>]}
+[0m13:32:39.872581 [info ] [MainThread]: 
+[0m13:32:39.872908 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:32:39.875166 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_personal_ronnieg'
+[0m13:32:39.882345 [debug] [ThreadPool]: Using snowflake connection "list_personal_ronnieg"
+[0m13:32:39.882636 [debug] [ThreadPool]: On list_personal_ronnieg: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "connection_name": "list_personal_ronnieg"} */
+show terse schemas in database personal_ronnieg
+    limit 10000
+[0m13:32:39.882830 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:32:41.204183 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 1.321 seconds
+[0m13:32:41.207652 [debug] [ThreadPool]: On list_personal_ronnieg: Close
+[0m13:32:42.237854 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_personal_ronnieg, now list_personal_ronnieg_dbt_staging)
+[0m13:32:42.247084 [debug] [ThreadPool]: Using snowflake connection "list_personal_ronnieg_dbt_staging"
+[0m13:32:42.247601 [debug] [ThreadPool]: On list_personal_ronnieg_dbt_staging: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "connection_name": "list_personal_ronnieg_dbt_staging"} */
+show objects in personal_ronnieg.dbt_staging limit 10000
+[0m13:32:42.248020 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:32:43.538971 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 1.291 seconds
+[0m13:32:43.540699 [debug] [ThreadPool]: On list_personal_ronnieg_dbt_staging: Close
+[0m13:32:43.933078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc06d90>]}
+[0m13:32:43.934315 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:32:43.935012 [info ] [MainThread]: 
+[0m13:32:43.938247 [debug] [Thread-3 (]: Began running node model.compliance_data.quality_assurance_operations_agents_scored
+[0m13:32:43.938769 [debug] [Thread-4 (]: Began running node model.compliance_data.square_notary_assignment_status_details
+[0m13:32:43.939295 [debug] [Thread-5 (]: Began running node model.compliance_data.square_quality_assurance_case_decision_scd
+[0m13:32:43.939790 [debug] [Thread-6 (]: Began running node model.compliance_data.square_quality_assurance_case_details
+[0m13:32:43.940369 [info ] [Thread-3 (]: 1 of 9 START sql view model dbt_staging.quality_assurance_operations_agents_scored  [RUN]
+[0m13:32:43.940988 [info ] [Thread-4 (]: 2 of 9 START sql view model dbt_staging.square_notary_assignment_status_details  [RUN]
+[0m13:32:43.941554 [info ] [Thread-5 (]: 3 of 9 START sql view model dbt_staging.square_quality_assurance_case_decision_scd  [RUN]
+[0m13:32:43.942088 [info ] [Thread-6 (]: 4 of 9 START sql view model dbt_staging.square_quality_assurance_case_details .. [RUN]
+[0m13:32:43.943007 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_personal_ronnieg_dbt_staging, now model.compliance_data.quality_assurance_operations_agents_scored)
+[0m13:32:43.943606 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.compliance_data.square_notary_assignment_status_details'
+[0m13:32:43.944159 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.compliance_data.square_quality_assurance_case_decision_scd'
+[0m13:32:43.944667 [debug] [Thread-6 (]: Acquiring new snowflake connection 'model.compliance_data.square_quality_assurance_case_details'
+[0m13:32:43.945081 [debug] [Thread-3 (]: Began compiling node model.compliance_data.quality_assurance_operations_agents_scored
+[0m13:32:43.945565 [debug] [Thread-4 (]: Began compiling node model.compliance_data.square_notary_assignment_status_details
+[0m13:32:43.946052 [debug] [Thread-5 (]: Began compiling node model.compliance_data.square_quality_assurance_case_decision_scd
+[0m13:32:43.946459 [debug] [Thread-6 (]: Began compiling node model.compliance_data.square_quality_assurance_case_details
+[0m13:32:43.953225 [debug] [Thread-3 (]: Writing injected SQL for node "model.compliance_data.quality_assurance_operations_agents_scored"
+[0m13:32:43.955513 [debug] [Thread-4 (]: Writing injected SQL for node "model.compliance_data.square_notary_assignment_status_details"
+[0m13:32:43.958856 [debug] [Thread-5 (]: Writing injected SQL for node "model.compliance_data.square_quality_assurance_case_decision_scd"
+[0m13:32:43.960902 [debug] [Thread-6 (]: Writing injected SQL for node "model.compliance_data.square_quality_assurance_case_details"
+[0m13:32:43.962275 [debug] [Thread-4 (]: Began executing node model.compliance_data.square_notary_assignment_status_details
+[0m13:32:43.962737 [debug] [Thread-5 (]: Began executing node model.compliance_data.square_quality_assurance_case_decision_scd
+[0m13:32:43.981724 [debug] [Thread-3 (]: Began executing node model.compliance_data.quality_assurance_operations_agents_scored
+[0m13:32:43.983037 [debug] [Thread-4 (]: Writing runtime sql for node "model.compliance_data.square_notary_assignment_status_details"
+[0m13:32:43.983260 [debug] [Thread-6 (]: Began executing node model.compliance_data.square_quality_assurance_case_details
+[0m13:32:43.985625 [debug] [Thread-5 (]: Writing runtime sql for node "model.compliance_data.square_quality_assurance_case_decision_scd"
+[0m13:32:43.987935 [debug] [Thread-3 (]: Writing runtime sql for node "model.compliance_data.quality_assurance_operations_agents_scored"
+[0m13:32:43.990548 [debug] [Thread-6 (]: Writing runtime sql for node "model.compliance_data.square_quality_assurance_case_details"
+[0m13:32:43.993584 [debug] [Thread-4 (]: Using snowflake connection "model.compliance_data.square_notary_assignment_status_details"
+[0m13:32:43.995715 [debug] [Thread-5 (]: Using snowflake connection "model.compliance_data.square_quality_assurance_case_decision_scd"
+[0m13:32:43.996100 [debug] [Thread-4 (]: On model.compliance_data.square_notary_assignment_status_details: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.square_notary_assignment_status_details"} */
+create or replace   view personal_ronnieg.dbt_staging.square_notary_assignment_status_details
+  
+   as (
+    WITH square_assignments_and_assignment_changes AS (
+	SELECT
+		changes.assignment_change_id,
+		changes.assignment_id,
+		changes.occurred_at,
+		changes.actor_uid,
+		changes.actor_name,
+		changes.reason,
+		changes.field_name,
+		changes.old_value,
+		changes.new_value
+	FROM
+		app_compliance.sca_staging.notary__assignment_changes AS changes
+	INNER JOIN
+		app_compliance.sca_staging.notary__square_assignments AS assignments ON changes.assignment_id = assignments.assignment_id
+),
+assignment_status_first_and_last_change AS (
+	SELECT
+		assignment_id,
+		MIN(occurred_at) AS status_first_change_at,
+		MAX(occurred_at) AS status_last_change_at
+	FROM
+		square_assignments_and_assignment_changes
+	WHERE
+		field_name = 'status'
+	GROUP BY ALL
+),
+current_assignment_status AS (
+	SELECT
+		assignment_id,
+		new_value as current_status,
+		occurred_at as status_effective_at
+	FROM
+		square_assignments_and_assignment_changes
+	WHERE
+		field_name = 'status'
+	GROUP BY ALL
+	QUALIFY ROW_NUMBER() OVER (PARTITION BY assignment_id ORDER BY occurred_at ASC) = 1
+),
+assignment_completed_at AS (
+	SELECT
+		assignment_id,
+		occurred_at as assignment_completed_at
+	FROM
+		square_assignments_and_assignment_changes
+	WHERE
+		field_name = 'status'
+	AND
+		new_value = 'completed'
+	GROUP BY ALL
+	QUALIFY ROW_NUMBER() OVER (PARTITION BY assignment_id ORDER BY occurred_at DESC) = 1
+),
+assignment_closed_at AS (
+	SELECT
+		assignment_id,
+		occurred_at AS assignment_closed_at
+	FROM
+		square_assignments_and_assignment_changes
+	WHERE
+		field_name = 'status'
+	AND
+		new_value = 'closed'
+	GROUP BY ALL
+	QUALIFY ROW_NUMBER() OVER (PARTITION BY assignment_id ORDER BY occurred_at DESC) = 1
+),
+assignment_first_and_last_claimed_at AS (
+	SELECT
+		assignment_id,
+		min(occurred_at) as first_claimed_at,
+		max(occurred_at) as last_claimed_at
+	FROM
+		square_assignments_and_assignment_changes
+	WHERE
+		field_name = 'status'
+	AND
+		new_value = 'claimed'
+	GROUP BY ALL
+),
+assignment_status_details AS (
+	SELECT
+		assignment_changes.assignment_id,
+		current_status.current_status,
+		current_status.status_effective_at,
+		change.status_first_change_at,
+		change.status_last_change_at,
+		completed.assignment_completed_at,
+		closed.assignment_closed_at,
+		claimed.first_claimed_at,
+		claimed.last_claimed_at
+	FROM
+		square_assignments_and_assignment_changes as assignment_changes
+	LEFT JOIN 
+		current_assignment_status as current_status on assignment_changes.assignment_id = current_status.assignment_id
+	LEFT JOIN
+		assignment_status_first_and_last_change as change on assignment_changes.assignment_id = change.assignment_id
+	LEFT JOIN 
+		assignment_completed_at as completed on assignment_changes.assignment_id = completed.assignment_id
+	LEFT JOIN 
+		assignment_closed_at as closed on assignment_changes.assignment_id = closed.assignment_id
+	LEFT JOIN 
+		assignment_first_and_last_claimed_at as claimed on assignment_changes.assignment_id = claimed.assignment_id
+),
+final AS (
+	SELECT
+		assignment_id,
+		current_status,
+		status_effective_at,
+		status_first_change_at,
+		status_last_change_at,
+		assignment_completed_at,
+		assignment_closed_at,
+		first_claimed_at,
+		last_claimed_at
+	FROM
+		assignment_status_details
+)
+SELECT * FROM final
+;
+[0m13:32:44.000237 [debug] [Thread-3 (]: Using snowflake connection "model.compliance_data.quality_assurance_operations_agents_scored"
+[0m13:32:44.000605 [debug] [Thread-5 (]: On model.compliance_data.square_quality_assurance_case_decision_scd: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.square_quality_assurance_case_decision_scd"} */
+create or replace   view personal_ronnieg.dbt_staging.square_quality_assurance_case_decision_scd
+  
+   as (
+    WITH qc_decisions_slowly_changing_dimension AS (
+	SELECT
+		notary_case_id,
+		assignment_id,
+		decision_id,
+		qc_agent_registry_id,
+		qc_agent_name,
+		qc_agent_alias,
+		qc_team,
+		ops_agent_registry_id,
+		ops_agent_name,
+		ops_agent_team,
+		target_id,
+		target_id_type,
+		unit_token,
+		ops_queue,
+		country_code,	
+		ops_agent_action,
+		ops_agent_action_at,
+		is_agent_follow_up_required,
+		qc_score,
+		qc_comment,
+		qc_note,
+		is_procedure_review,
+		procedure_review_comment,
+		product,
+		smr_typology,
+		sar_typology,
+		sfs_account_type,
+		target_qc_dispute_id,
+		amlrs_agent_location,	
+		is_sample_testing_or_training,
+		qc_queue,
+		qc_case_queue_category,
+		decision_created_at AS effective_start_at,
+		LEAD(decision_created_at) OVER (PARTITION BY decision_id ORDER BY decision_created_at) AS effective_end_at
+	FROM
+		app_compliance.sca_staging.merchantcomphub__qc_decision
+	ORDER BY
+		notary_case_id, 
+		decision_created_at
+),
+business_current_flag AS (
+	SELECT
+		notary_case_id,
+		assignment_id,
+		decision_id,
+		qc_agent_registry_id,
+		qc_agent_name,
+		qc_team,
+		ops_agent_registry_id,
+		ops_agent_name,
+		ops_agent_team,
+		target_id,
+		target_id_type,
+		unit_token,
+		ops_queue,
+		country_code,	
+		ops_agent_action,
+		ops_agent_action_at,
+		is_agent_follow_up_required,
+		qc_score,
+		qc_comment,
+		qc_note,
+		is_procedure_review,
+		procedure_review_comment,
+		product,
+		smr_typology,
+		sar_typology,
+		sfs_account_type,
+		target_qc_dispute_id,
+		amlrs_agent_location,	
+		qc_agent_alias,
+		is_sample_testing_or_training,
+		qc_queue,
+		qc_case_queue_category,
+		effective_start_at,
+		effective_end_at,
+		CASE WHEN effective_end_at IS NULL THEN TRUE ELSE FALSE END AS is_current_decision
+	FROM
+		qc_decisions_slowly_changing_dimension
+),
+final AS (
+	SELECT
+		notary_case_id,
+		assignment_id,
+		decision_id,
+		qc_agent_registry_id,
+		qc_agent_name,
+		qc_agent_alias,
+		qc_team,
+		ops_agent_registry_id,
+		ops_agent_name,
+		ops_agent_team,
+		target_id,
+		target_id_type,
+		unit_token,
+		ops_queue,
+		country_code,	
+		ops_agent_action,
+		ops_agent_action_at,
+		is_agent_follow_up_required,
+		qc_score,
+		qc_comment,
+		qc_note,
+		is_procedure_review,
+		procedure_review_comment,
+		product,
+		smr_typology,
+		sar_typology,
+		sfs_account_type,
+		target_qc_dispute_id,
+		amlrs_agent_location,	
+		is_sample_testing_or_training,
+		qc_queue,
+		qc_case_queue_category,
+		effective_start_at,
+		effective_end_at,
+		is_current_decision
+	FROM
+		business_current_flag
+)
+SELECT * FROM final
+;
+[0m13:32:44.003906 [debug] [Thread-6 (]: Using snowflake connection "model.compliance_data.square_quality_assurance_case_details"
+[0m13:32:44.004249 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:32:44.004703 [debug] [Thread-3 (]: On model.compliance_data.quality_assurance_operations_agents_scored: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.quality_assurance_operations_agents_scored"} */
+create or replace   view personal_ronnieg.dbt_staging.quality_assurance_operations_agents_scored
+  
+   as (
+    WITH operation_agents_with_cases_scored AS (
+	SELECT DISTINCT
+		ops_agent_registry_id AS registry_id
+		, ops_agent_name
+	FROM
+		app_compliance.sca_transform.square_quality_assurance_case_decision_scd
+	WHERE
+		is_current_decision
+),
+square_compliance_quality_assurance_operation_agents AS (
+	SELECT
+		workday.employee_id AS ops_agent_employee_id
+		, ops_agents.registry_id 
+		, workday.first_name || ' ' || last_name AS employee_name
+		, workday.email AS workday_email
+		, CASE 
+			WHEN workday_email LIKE '%@squareup.com' THEN REPLACE(workday_email, '@squareup.com', '@block.xyz')
+			WHEN workday_email LIKE '%@block.xyz' THEN REPLACE(workday_email, '@block.xyz', '@squareup.com')
+			ELSE workday_email
+		END AS alternate_email
+		, workday.active_status
+		, workday.city
+		, workday.state
+		, workday.country
+		, CASE 
+			WHEN workday.office IN ('IN - Remote') THEN 'AMLRS India' 
+			WHEN workday.office IN ('BG - Sofia - Remote') THEN 'AMLRS Bulgaria' 
+			WHEN workday.worker_type = 'Contingent Worker' AND workday.country IN ('United States of America', 'Canada') THEN 'AMLRS North America'
+			WHEN workday.worker_type = 'Contingent Worker' AND workday.country = 'Japan' THEN 'Japan Contractor' 
+			WHEN workday.worker_type = 'Employee' THEN 'FTE Internal' 
+			ELSE workday.office 
+		END AS location
+		, workday.hire_date
+		, workday.termination_date
+		, workday.people_lead_flag
+		, workday.worker_type
+		, workday.cost_center_id
+		, workday.team_code
+		, workday.job_profile_set
+	FROM operation_agents_with_cases_scored AS ops_agents
+	INNER JOIN registry.raw_oltp.users AS registry_user
+		ON ops_agents.registry_id = registry_user.uid
+	INNER JOIN sqoffice_data.public.wd_employees AS workday
+		ON registry_user.employee_id = workday.employee_id
+	WHERE
+		1=1
+	AND 
+		people_lead_flag = 0
+),
+ops_agents_direct_lead AS (
+SELECT DISTINCT 
+	ops_agents.ops_agent_employee_id
+	, max_by(manager_hierarchy.lead_employee_id, manager_hierarchy.effective_start) AS current_direct_lead_employee_id 
+	, max_by(manager_hierarchy.direct_lead, manager_hierarchy.effective_start) AS current_direct_lead
+	, max_by(manager_hierarchy.skip_lead, manager_hierarchy.effective_start)   AS current_skip_lead
+FROM square_compliance_quality_assurance_operation_agents AS ops_agents
+INNER JOIN sqoffice_data.public.wd_manager_hierarchy_history AS manager_hierarchy
+	ON ops_agents.ops_agent_employee_id = manager_hierarchy.employee_id
+WHERE manager_hierarchy.direct_lead IS NOT NULL
+GROUP BY ALL  
+),
+ops_agent_direct_lead_email AS (
+SELECT
+	lead.ops_agent_employee_id
+	, lead.current_direct_lead_employee_id 
+	, lead.current_direct_lead
+	, lead.current_skip_lead
+	, lead_workday.email AS current_direct_lead_workday_email
+	, CASE 
+		WHEN current_direct_lead_workday_email LIKE '%@squareup.com' THEN REPLACE(current_direct_lead_workday_email, '@squareup.com', '@block.xyz')
+		WHEN current_direct_lead_workday_email LIKE '%@block.xyz' THEN REPLACE(current_direct_lead_workday_email, '@block.xyz', '@squareup.com')
+		ELSE current_direct_lead_workday_email
+	END AS current_direct_lead_alternate_email
+FROM ops_agents_direct_lead AS lead
+LEFT JOIN sqoffice_data.public.wd_employees AS lead_workday
+	ON lead.current_direct_lead_employee_id = lead_workday.employee_id
+),
+headcount_category_dri AS (
+SELECT DISTINCT
+    headcount_category
+    , TRIM(VALUE) AS ops_dri 
+FROM app_compliance.seller.square_queue_metadata, 
+LATERAL SPLIT_TO_TABLE(ops_dri, '&')
+WHERE headcount_category <> 'Unknown'
+),
+recent_cases AS (
+SELECT 
+	headcount_category_queue 
+	, closing_agent_name 
+	, closing_agent_uid
+	, COUNT(DISTINCT queue) AS past_one_month_queue_count  
+	, ROW_NUMBER() OVER (PARTITION BY closing_agent_uid ORDER BY COUNT(DISTINCT queue) DESC) row_num 
+FROM app_compliance.square.compliance_agent_cases_history
+WHERE 
+	DATE_TRUNC(month, most_recent_closed_case_date) BETWEEN DATEADD(month,-1,DATE_TRUNC(month,current_date())) AND current_date()
+GROUP BY ALL
+QUALIFY ROW_NUMBER() OVER (PARTITION BY closing_agent_uid ORDER BY COUNT(DISTINCT queue) DESC) = 1 
+ORDER BY 1
+),
+square_quality_assurance_operation_agent_details AS (
+SELECT
+	ops_agents.ops_agent_employee_id
+	, ops_agents.registry_id 
+	, ops_agents.employee_name
+	, ops_agents.workday_email
+	, ops_agents.alternate_email
+	, ops_agents.active_status
+	, ops_agents.city
+	, ops_agents.state
+	, ops_agents.country
+	, ops_agents.location
+	, ops_agents.hire_date
+	, ops_agents.termination_date
+	, ops_agents.people_lead_flag
+	, ops_agents.worker_type
+	, ops_agents.cost_center_id
+	, ops_agents.team_code
+	, ops_agents.job_profile_set
+	, direct_lead.current_direct_lead_employee_id 
+	, direct_lead.current_direct_lead
+	, direct_lead.current_skip_lead
+	, direct_lead.current_direct_lead_workday_email
+	, direct_lead.current_direct_lead_alternate_email
+	, agent_headcount_category.headcount_category AS headcount_category_workday
+	, pos_cases.headcount_category_queue AS headcount_category_pos_cases
+	, CASE 
+		WHEN headcount_category_pos_cases = 'Quality Management' THEN headcount_category_pos_cases
+		WHEN ops_agents.location <> 'FTE Internal' THEN headcount_category_pos_cases 
+		WHEN headcount_category_pos_cases IS NOT NULL AND headcount_category_pos_cases != headcount_category_workday THEN headcount_category_pos_cases 
+		ELSE headcount_category_workday 
+	END AS headcount_category
+FROM
+	square_compliance_quality_assurance_operation_agents AS ops_agents
+LEFT JOIN ops_agent_direct_lead_email AS direct_lead
+	ON ops_agents.ops_agent_employee_id = direct_lead.ops_agent_employee_id
+LEFT JOIN headcount_category_dri AS agent_headcount_category	
+	ON agent_headcount_category.ops_dri = direct_lead.current_direct_lead
+LEFT JOIN recent_cases as pos_cases 
+	ON pos_cases.closing_agent_uid = ops_agents.registry_id	
+),
+final AS (
+SELECT 
+	ops_agent_employee_id
+	, registry_id 
+	, employee_name
+	, workday_email
+	, alternate_email
+	, active_status
+	, city
+	, state
+	, country
+	, location
+	, hire_date
+	, termination_date
+	, people_lead_flag
+	, worker_type
+	, cost_center_id
+	, team_code
+	, job_profile_set
+	, current_direct_lead_employee_id 
+	, current_direct_lead
+	, current_skip_lead
+	, current_direct_lead_workday_email
+	, current_direct_lead_alternate_email
+	, headcount_category
+FROM
+	square_quality_assurance_operation_agent_details
+)
+SELECT * FROM final
+  );
+[0m13:32:44.005124 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m13:32:44.005495 [debug] [Thread-6 (]: On model.compliance_data.square_quality_assurance_case_details: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.square_quality_assurance_case_details"} */
+create or replace   view personal_ronnieg.dbt_staging.square_quality_assurance_case_details
+  
+   as (
+    WITH decisions_business_current_records AS (
+	SELECT * FROM app_compliance.sca_transform.square_quality_assurance_case_decision_scd WHERE is_current_decision
+),
+disputes AS (
+	SELECT * FROM app_compliance.sca_staging.merchantcomphub__qc_dispute
+),
+decisions_keyword AS (
+	SELECT * FROM app_compliance.sca_staging.merchantcomphub__qc_question_answer
+),
+ops_agent_follow_up_complete AS (
+	SELECT * FROM app_compliance.sca_staging.merchantcomphub__qc_decision_followup
+),
+square_regulator_cases AS (
+	SELECT * FROM app_compliance.seller.pos_cases
+),
+compliance_operations_employees AS (
+	SELECT * FROM app_compliance.sca_transform.quality_assurance_operations_agents_scored
+),
+quality_assurance_employees AS (
+	SELECT * FROM app_compliance.cash.workday_compliance_employees
+),
+qc_decision_case_details AS (
+	SELECT
+		qc_decision.decision_id
+		, qc_decision.effective_start_at AS decision_created_at
+		, qc_decision.qc_agent_registry_id
+		, qc_decision.qc_agent_alias
+		, qa_employees.employee_name AS qc_agent_name
+		, qc_decision.notary_case_id
+		, qc_decision.assignment_id
+		, qc_decision.unit_token
+		, qc_decision.ops_agent_action
+		, qc_decision.ops_agent_action_at
+		, qc_decision.qc_score
+		, LISTAGG(DISTINCT qc_keyword.keyword, ', ') AS keyword
+		, qc_decision.qc_comment
+		, qc_decision.is_agent_follow_up_required
+		, CASE
+			WHEN follow_up.follow_up_action_id IS NOT NULL AND qc_decision.is_agent_follow_up_required = TRUE
+			THEN TRUE ELSE FALSE
+		END AS has_agent_completed_follow_up
+		, qc_decision.is_sample_testing_or_training
+		, qc_decision.procedure_review_comment
+		, qc_decision.country_code
+		, qc_decision.product
+		, qc_decision.ops_agent_registry_id
+		, qc_decision.ops_agent_name
+		, qc_decision.ops_agent_team
+		, ops_employees.ops_agent_employee_id
+		, ops_employees.workday_email AS ops_agent_workday_email
+		, ops_employees.alternate_email AS ops_agent_alternate_email
+		, ops_employees.current_direct_lead_employee_id AS ops_agent_current_direct_lead_employee_id
+		, ops_employees.current_direct_lead AS ops_agent_current_direct_lead
+		, ops_employees.country AS ops_agent_country
+		, ops_employees.headcount_category
+		, ops_employees.current_direct_lead_workday_email AS ops_agent_direct_leads_email
+		, ops_employees.current_direct_lead_alternate_email AS ops_agent_direct_leads_alternate_email
+		, qc_decision.qc_queue
+		, qc_decision.qc_case_queue_category
+		, qc_decision.ops_queue
+		, qc_decision.amlrs_agent_location
+		, qc_dispute.dispute_id
+		, qc_dispute.dispute_created_at
+		, qc_dispute.dispute_agent_name
+		, qc_dispute.dispute_agent_team
+		, qc_dispute.dispute_comment
+		, qc_dispute.triage_decision
+		, qc_dispute.triage_comment
+		, qc_dispute.triage_agent_alias
+		, COALESCE(regulator.case_token, qc_decision.target_id) as target_id
+		, regulator.originating_queue
+		, regulator.originating_queue_business_queue_category
+		, regulator.business_queue_category
+	FROM
+		decisions_business_current_records AS qc_decision
+	LEFT JOIN
+		disputes AS qc_dispute ON qc_decision.decision_id = qc_dispute.target_qc_decision_id
+	LEFT JOIN
+		decisions_keyword AS qc_keyword ON qc_decision.decision_id = qc_keyword.decision_id
+	LEFT JOIN
+		ops_agent_follow_up_complete AS follow_up ON qc_decision.decision_id = follow_up.decision_id
+	LEFT JOIN
+		square_regulator_cases AS regulator ON qc_decision.target_id = regulator.case_token
+	LEFT JOIN
+		compliance_operations_employees AS ops_employees ON qc_decision.ops_agent_registry_id = ops_employees.registry_id
+	LEFT JOIN
+		quality_assurance_employees AS qa_employees ON qc_decision.qc_agent_registry_id = qa_employees.uid
+	GROUP BY ALL
+),
+final AS (
+SELECT DISTINCT
+		decision_id
+		, decision_created_at
+		, qc_agent_registry_id
+		, qc_agent_alias
+		, qc_agent_name
+		, notary_case_id
+		, assignment_id
+		, unit_token
+		, ops_agent_action
+		, ops_agent_action_at
+		, qc_score
+		, keyword
+		, qc_comment
+		, is_agent_follow_up_required
+		, has_agent_completed_follow_up
+		, is_sample_testing_or_training
+		, procedure_review_comment
+		, country_code
+		, product
+		, ops_agent_registry_id
+		, ops_agent_name
+		, ops_agent_team
+		, ops_agent_employee_id
+		, ops_agent_workday_email
+		, ops_agent_alternate_email
+		, ops_agent_current_direct_lead_employee_id
+		, ops_agent_current_direct_lead
+		, headcount_category
+		, ops_agent_country 
+		, ops_agent_direct_leads_email
+		, ops_agent_direct_leads_alternate_email
+		, qc_queue
+		, qc_case_queue_category
+		, ops_queue
+		, amlrs_agent_location
+		, dispute_id
+		, dispute_created_at
+		, dispute_agent_name
+		, dispute_agent_team
+		, dispute_comment
+		, triage_decision
+		, triage_comment
+		, triage_agent_alias
+		, target_id
+		, originating_queue
+		, originating_queue_business_queue_category
+		, business_queue_category
+FROM
+	qc_decision_case_details
+)
+SELECT * FROM final
+;
+[0m13:32:44.005955 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:32:44.007186 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m13:32:45.057372 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01b7bb9c-080d-3730-0015-c10c3c698d17
+[0m13:32:45.058189 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 121 at position 0 unexpected ';'.
+[0m13:32:45.058978 [debug] [Thread-4 (]: On model.compliance_data.square_notary_assignment_status_details: Close
+[0m13:32:45.065254 [debug] [Thread-5 (]: Snowflake adapter: Snowflake query id: 01b7bb9c-080d-3732-0015-c10c3c69d54b
+[0m13:32:45.065950 [debug] [Thread-5 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 127 at position 0 unexpected ';'.
+[0m13:32:45.066574 [debug] [Thread-5 (]: On model.compliance_data.square_quality_assurance_case_decision_scd: Close
+[0m13:32:45.421066 [debug] [Thread-6 (]: Snowflake adapter: Snowflake query id: 01b7bb9c-080d-2927-0015-c10c3c69bb43
+[0m13:32:45.422011 [debug] [Thread-6 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 146 at position 0 unexpected ';'.
+[0m13:32:45.422789 [debug] [Thread-6 (]: On model.compliance_data.square_quality_assurance_case_details: Close
+[0m13:32:45.520539 [debug] [Thread-4 (]: Database Error in model square_notary_assignment_status_details (models/intermediate/notary/square_notary_assignment_status_details.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 121 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/intermediate/notary/square_notary_assignment_status_details.sql
+[0m13:32:45.522101 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0a0390>]}
+[0m13:32:45.522751 [error] [Thread-4 (]: 2 of 9 ERROR creating sql view model dbt_staging.square_notary_assignment_status_details  [[31mERROR[0m in 1.58s]
+[0m13:32:45.523335 [debug] [Thread-4 (]: Finished running node model.compliance_data.square_notary_assignment_status_details
+[0m13:32:45.523744 [debug] [Thread-4 (]: Began running node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:32:45.524720 [info ] [Thread-4 (]: 5 of 9 START sql view model dbt_staging.stg_merchantcomphub__qc_decision ....... [RUN]
+[0m13:32:45.525245 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.compliance_data.square_notary_assignment_status_details, now model.compliance_data.stg_merchantcomphub__qc_decision)
+[0m13:32:45.525590 [debug] [Thread-4 (]: Began compiling node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:32:45.529187 [debug] [Thread-4 (]: Writing injected SQL for node "model.compliance_data.stg_merchantcomphub__qc_decision"
+[0m13:32:45.530919 [debug] [Thread-4 (]: Began executing node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:32:45.534115 [debug] [Thread-4 (]: Writing runtime sql for node "model.compliance_data.stg_merchantcomphub__qc_decision"
+[0m13:32:45.537000 [debug] [Thread-5 (]: Database Error in model square_quality_assurance_case_decision_scd (models/intermediate/quality assurance/square_quality_assurance_case_decision_scd.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 127 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/intermediate/quality assurance/square_quality_assurance_case_decision_scd.sql
+[0m13:32:45.537512 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cee8310>]}
+[0m13:32:45.540440 [debug] [Thread-4 (]: Using snowflake connection "model.compliance_data.stg_merchantcomphub__qc_decision"
+[0m13:32:45.538071 [error] [Thread-5 (]: 3 of 9 ERROR creating sql view model dbt_staging.square_quality_assurance_case_decision_scd  [[31mERROR[0m in 1.59s]
+[0m13:32:45.541132 [debug] [Thread-4 (]: On model.compliance_data.stg_merchantcomphub__qc_decision: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.stg_merchantcomphub__qc_decision"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_merchantcomphub__qc_decision
+  
+   as (
+    WITH column_transforms_and_renames AS (
+	SELECT
+	-- ids/tokens/keys
+		id AS decision_id,
+		assignment_id,
+		notary_case_id,
+		ops_agent_id AS ops_agent_registry_id,
+		qc_agent_id AS qc_agent_registry_id,
+		target_id,
+		target_qc_dispute_id,
+		unit_token,
+
+	-- dates/timestamps
+		ops_agent_action_time AS ops_agent_action_at, -- AS actioned_time in current app_comp_qc.view LookML,
+		created_at AS decision_created_at,
+		updated_at AS decision_updated_at,
+
+	-- booleans
+		follow_up_required AS is_agent_follow_up_required,
+		procedure_review AS is_procedure_review,
+		sample_testing_or_training AS is_sample_testing_or_training,
+
+	-- measures
+		qc_score,
+
+	-- strings/varchars
+		amlrs_agent_location,
+		country_code,	
+		ops_agent_action, -- AS agent_action in current app_comp_qc.view LookML,
+		ops_agent_name,
+		ops_agent_team, -- AS agent_team in current app_comp_qc.view LookML,
+		qc_comment, -- AS comment in current app_comp_qc.view LookML,
+		qc_agent_alias,
+		qc_agent_name,
+		qc_note,
+		qc_team,
+		queue_slug as qc_queue,
+		CASE WHEN qc_queue ILIKE 'square_amlrs%' THEN TRUE ELSE FALSE END AS is_amlrs,
+		REPLACE(qc_queue, 'square_quality_control_') AS qc_case_queue_category,
+		CASE
+			WHEN product ILIKE '%payroll%' THEN 'Payroll'
+			WHEN product ILIKE '%cash%' THEN 'Cash'
+			WHEN product ILIKE '%BTC%' THEN 'Cash'
+			WHEN REGEXP_LIKE(unit_token, '(C_).*') THEN 'Cash'
+			WHEN product ILIKE '%capital%' THEN 'Capital'
+			WHEN product ILIKE '%seller%' THEN 'POS'
+		END AS product,
+		smr_typology,
+		sar_typology,
+		sfs_account_type,
+		target_id_type,
+		target_queue_slug AS ops_queue,
+		procedure_review_comment,	
+
+	-- metadata
+		__cdc_create_timestamp,
+		__cdc_update_timestamp,
+		__db_name,
+		__entity_schema_name,
+		__deleted_upstream
+
+	FROM 
+		merchantcomphub.raw_oltp.qc_decision
+	WHERE
+		-- filters out non-AMLRS QA test and sample data pre-launch date of Aug 1, 2024
+		(decision_created_at::date >= '2024-08-01')
+	OR
+		-- filters out AMLRS QA test and sample data pre-launch date of Sep 1, 2024
+		(qc_team = 'AMLRS QC' AND decision_created_at::date >= '2024-09-01')
+
+),
+final AS (
+	SELECT
+		decision_id,
+		assignment_id,
+		notary_case_id,
+		ops_agent_registry_id,
+		qc_agent_registry_id,
+		target_id,
+		target_qc_dispute_id,
+		unit_token,
+		ops_agent_action_at,
+		decision_created_at,
+		decision_updated_at,
+		is_agent_follow_up_required,
+		is_procedure_review,
+		is_sample_testing_or_training,
+		qc_score,
+		amlrs_agent_location,
+		country_code,	
+		ops_agent_action,
+		ops_agent_name,
+		ops_agent_team,
+		qc_comment,
+		qc_agent_alias,
+		qc_agent_name,
+		qc_team,
+		qc_note,
+		qc_queue,
+		qc_case_queue_category,
+		product,
+		smr_typology,
+		sar_typology,
+		sfs_account_type,
+		target_id_type,
+		ops_queue,
+		procedure_review_comment,
+	FROM
+		column_transforms_and_renames
+)
+SELECT * FROM final
+  );
+[0m13:32:45.541811 [debug] [Thread-5 (]: Finished running node model.compliance_data.square_quality_assurance_case_decision_scd
+[0m13:32:45.542213 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m13:32:45.542653 [debug] [Thread-5 (]: Began running node model.compliance_data.stg_merchantcomphub__qc_decision_followup
+[0m13:32:45.543394 [info ] [Thread-5 (]: 6 of 9 START sql view model dbt_staging.stg_merchantcomphub__qc_decision_followup  [RUN]
+[0m13:32:45.545302 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.compliance_data.square_quality_assurance_case_decision_scd, now model.compliance_data.stg_merchantcomphub__qc_decision_followup)
+[0m13:32:45.545678 [debug] [Thread-5 (]: Began compiling node model.compliance_data.stg_merchantcomphub__qc_decision_followup
+[0m13:32:45.547868 [debug] [Thread-5 (]: Writing injected SQL for node "model.compliance_data.stg_merchantcomphub__qc_decision_followup"
+[0m13:32:45.549459 [debug] [Thread-5 (]: Began executing node model.compliance_data.stg_merchantcomphub__qc_decision_followup
+[0m13:32:45.552471 [debug] [Thread-5 (]: Writing runtime sql for node "model.compliance_data.stg_merchantcomphub__qc_decision_followup"
+[0m13:32:45.554273 [debug] [Thread-5 (]: Using snowflake connection "model.compliance_data.stg_merchantcomphub__qc_decision_followup"
+[0m13:32:45.554723 [debug] [Thread-5 (]: On model.compliance_data.stg_merchantcomphub__qc_decision_followup: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.stg_merchantcomphub__qc_decision_followup"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_merchantcomphub__qc_decision_followup
+  
+   as (
+    WITH column_transforms_and_renames AS (
+	SELECT
+	-- ids/tokens/keys
+		id as follow_up_action_id,
+		decision_id,
+
+	-- dates/timestamps
+		created_at AS follow_up_action_created_at,
+
+	-- booleans
+	-- measures
+
+	-- strings/varchars
+		agent_alias,
+
+	-- metadata
+		__cdc_create_timestamp,
+		__cdc_update_timestamp,
+		__db_name,
+		__deleted_upstream,
+		__entity_schema_name,
+	FROM 
+		merchantcomphub.raw_oltp.qc_decision_followup
+	WHERE
+		-- filters out QA test and sample data pre-launch date of Aug 1, 2024
+		follow_up_action_created_at::date >= '2024-08-01'
+),
+final AS (
+	SELECT
+		follow_up_action_id,
+		decision_id,
+		follow_up_action_created_at,
+		agent_alias,
+	FROM 
+		column_transforms_and_renames
+)
+SELECT * FROM final
+  );
+[0m13:32:45.555052 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:32:45.805475 [debug] [Thread-6 (]: Database Error in model square_quality_assurance_case_details (models/marts/quality assurance/square_quality_assurance_case_details.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 146 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/marts/quality assurance/square_quality_assurance_case_details.sql
+[0m13:32:45.806230 [debug] [Thread-6 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bcc9f90>]}
+[0m13:32:45.806846 [error] [Thread-6 (]: 4 of 9 ERROR creating sql view model dbt_staging.square_quality_assurance_case_details  [[31mERROR[0m in 1.86s]
+[0m13:32:45.807389 [debug] [Thread-6 (]: Finished running node model.compliance_data.square_quality_assurance_case_details
+[0m13:32:45.807799 [debug] [Thread-6 (]: Began running node model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review
+[0m13:32:45.808279 [info ] [Thread-6 (]: 7 of 9 START sql view model dbt_staging.stg_merchantcomphub__qc_decision_procedure_review  [RUN]
+[0m13:32:45.808775 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly model.compliance_data.square_quality_assurance_case_details, now model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review)
+[0m13:32:45.809206 [debug] [Thread-6 (]: Began compiling node model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review
+[0m13:32:45.811378 [debug] [Thread-6 (]: Writing injected SQL for node "model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review"
+[0m13:32:45.812270 [debug] [Thread-6 (]: Began executing node model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review
+[0m13:32:45.816426 [debug] [Thread-6 (]: Writing runtime sql for node "model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review"
+[0m13:32:45.817783 [debug] [Thread-6 (]: Using snowflake connection "model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review"
+[0m13:32:45.818269 [debug] [Thread-6 (]: On model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_merchantcomphub__qc_decision_procedure_review
+  
+   as (
+    WITH decision_procedure_review_source AS (
+	SELECT * FROM merchantcomphub.raw_oltp.qc_decision_procedure_review
+),
+final AS (
+SELECT
+
+	-- ids/tokens/keys
+	id
+	, decision_id
+
+	-- dates/timestamps
+	, created_at
+
+	-- booleans
+	-- measures
+
+	-- strings/varchars
+	, agent_alias
+
+	-- metadata
+	, __cdc_create_timestamp
+	, __cdc_update_timestamp
+	, __db_name
+	, __entity_schema_name
+	, __deleted_upstream
+
+FROM
+	decision_procedure_review_source
+)
+SELECT * FROM final
+  );
+[0m13:32:45.818641 [debug] [Thread-6 (]: Opening a new connection, currently in state closed
+[0m13:32:46.164018 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.158 seconds
+[0m13:32:46.179562 [debug] [Thread-3 (]: On model.compliance_data.quality_assurance_operations_agents_scored: Close
+[0m13:32:46.644252 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cb70510>]}
+[0m13:32:46.645804 [info ] [Thread-3 (]: 1 of 9 OK created sql view model dbt_staging.quality_assurance_operations_agents_scored  [[32mSUCCESS 1[0m in 2.70s]
+[0m13:32:46.646695 [debug] [Thread-3 (]: Finished running node model.compliance_data.quality_assurance_operations_agents_scored
+[0m13:32:46.647323 [debug] [Thread-3 (]: Began running node model.compliance_data.stg_merchantcomphub__qc_dispute
+[0m13:32:46.648198 [info ] [Thread-3 (]: 8 of 9 START sql view model dbt_staging.stg_merchantcomphub__qc_dispute ........ [RUN]
+[0m13:32:46.648917 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.compliance_data.quality_assurance_operations_agents_scored, now model.compliance_data.stg_merchantcomphub__qc_dispute)
+[0m13:32:46.649434 [debug] [Thread-3 (]: Began compiling node model.compliance_data.stg_merchantcomphub__qc_dispute
+[0m13:32:46.651728 [debug] [Thread-3 (]: Writing injected SQL for node "model.compliance_data.stg_merchantcomphub__qc_dispute"
+[0m13:32:46.652660 [debug] [Thread-3 (]: Began executing node model.compliance_data.stg_merchantcomphub__qc_dispute
+[0m13:32:46.655563 [debug] [Thread-3 (]: Writing runtime sql for node "model.compliance_data.stg_merchantcomphub__qc_dispute"
+[0m13:32:46.657529 [debug] [Thread-3 (]: Using snowflake connection "model.compliance_data.stg_merchantcomphub__qc_dispute"
+[0m13:32:46.657922 [debug] [Thread-3 (]: On model.compliance_data.stg_merchantcomphub__qc_dispute: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.stg_merchantcomphub__qc_dispute"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_merchantcomphub__qc_dispute
+  
+   as (
+    WITH column_transforms_and_renames AS (
+	SELECT
+	-- ids/tokens/keys
+		qc_dispute.id AS dispute_id,
+		qc_dispute.dispute_agent_id AS dispute_agent_registry_id,
+		qc_dispute.notary_case_id,
+		qc_dispute.target_id,
+		qc_dispute.target_qc_decision_id,
+
+	-- dates/timestamps
+		qc_dispute.created_at AS dispute_created_at,
+		qc_dispute.updated_at AS dispute_updated_at,
+
+	-- booleans
+
+	-- measures
+
+	-- strings/varchars
+		qc_dispute.additional_links,
+		qc_dispute.dispute_comment,
+		qc_dispute.dispute_agent_alias,
+		qc_dispute.dispute_agent_name,
+		qc_dispute.dispute_agent_team,
+		qc_dispute.feedback_answers AS feedback_answers_json,
+		qc_dispute.target_id_type,
+		qc_dispute.triage_agent_alias,
+		qc_dispute.triage_comment,
+		qc_dispute.triage_decision,
+
+	-- metadata
+		qc_dispute.__cdc_create_timestamp,
+		qc_dispute.__cdc_update_timestamp,
+		qc_dispute.__db_name,
+		qc_dispute.__deleted_upstream,
+		qc_dispute.__entity_schema_name
+		
+	FROM
+		merchantcomphub.raw_oltp.qc_dispute
+	WHERE
+		-- filters out QA test and sample data pre-launch date of Aug 1, 2024
+		dispute_created_at::date >= '2024-08-01'
+),
+final AS (
+	SELECT	
+		dispute_id,
+		dispute_agent_registry_id,
+		notary_case_id,
+		target_id,
+		target_qc_decision_id,
+		dispute_created_at,
+		dispute_updated_at,
+		additional_links,
+		dispute_comment,
+		dispute_agent_alias,
+		dispute_agent_name,
+		dispute_agent_team,
+		feedback_answers_json,
+		target_id_type,
+		triage_agent_alias,
+		triage_comment,
+		triage_decision,
+	FROM 
+		column_transforms_and_renames
+)
+SELECT * FROM final
+  );
+[0m13:32:46.658288 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m13:32:46.848143 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.293 seconds
+[0m13:32:46.854880 [debug] [Thread-5 (]: On model.compliance_data.stg_merchantcomphub__qc_decision_followup: Close
+[0m13:32:47.201846 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b7fb010>]}
+[0m13:32:47.203129 [info ] [Thread-5 (]: 6 of 9 OK created sql view model dbt_staging.stg_merchantcomphub__qc_decision_followup  [[32mSUCCESS 1[0m in 1.66s]
+[0m13:32:47.204061 [debug] [Thread-5 (]: Finished running node model.compliance_data.stg_merchantcomphub__qc_decision_followup
+[0m13:32:47.204514 [debug] [Thread-5 (]: Began running node model.compliance_data.stg_merchantcomphub__qc_question_answer
+[0m13:32:47.205126 [info ] [Thread-5 (]: 9 of 9 START sql view model dbt_staging.stg_merchantcomphub__qc_question_answer  [RUN]
+[0m13:32:47.205858 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.compliance_data.stg_merchantcomphub__qc_decision_followup, now model.compliance_data.stg_merchantcomphub__qc_question_answer)
+[0m13:32:47.206294 [debug] [Thread-5 (]: Began compiling node model.compliance_data.stg_merchantcomphub__qc_question_answer
+[0m13:32:47.208818 [debug] [Thread-5 (]: Writing injected SQL for node "model.compliance_data.stg_merchantcomphub__qc_question_answer"
+[0m13:32:47.210691 [debug] [Thread-5 (]: Began executing node model.compliance_data.stg_merchantcomphub__qc_question_answer
+[0m13:32:47.213795 [debug] [Thread-5 (]: Writing runtime sql for node "model.compliance_data.stg_merchantcomphub__qc_question_answer"
+[0m13:32:47.215450 [debug] [Thread-5 (]: Using snowflake connection "model.compliance_data.stg_merchantcomphub__qc_question_answer"
+[0m13:32:47.215830 [debug] [Thread-5 (]: On model.compliance_data.stg_merchantcomphub__qc_question_answer: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "compliance_data", "target_name": "dev", "node_id": "model.compliance_data.stg_merchantcomphub__qc_question_answer"} */
+create or replace   view personal_ronnieg.dbt_staging.stg_merchantcomphub__qc_question_answer
+  
+   as (
+    WITH column_transforms_and_renames AS (
+	SELECT
+	-- ids/tokens/keys
+		qc_decision_id AS decision_id,
+		qc_question_id AS question_id,
+
+	-- dates/timestamps
+		created_at AS question_created_at,
+		updated_at AS question_updated_at,
+
+	-- booleans
+
+	-- measures
+		points,
+
+	-- strings/varchars
+		answer,
+		keyword,
+
+	-- metadata
+		__cdc_create_timestamp,
+		__cdc_update_timestamp,
+		__db_name,
+		__deleted_upstream,
+		__entity_schema_name,
+	FROM 
+		merchantcomphub.raw_oltp.qc_question_answer
+),
+final AS (
+	SELECT
+		decision_id,
+		question_id,
+		question_created_at,
+		question_updated_at,
+		points,
+		answer,
+		keyword,
+	FROM 
+		column_transforms_and_renames
+)
+SELECT * FROM final
+  );
+[0m13:32:47.216165 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m13:32:47.299797 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 1.481 seconds
+[0m13:32:47.302019 [debug] [Thread-6 (]: On model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review: Close
+[0m13:32:47.557171 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 2.015 seconds
+[0m13:32:47.562771 [debug] [Thread-4 (]: On model.compliance_data.stg_merchantcomphub__qc_decision: Close
+[0m13:32:47.711320 [debug] [Thread-6 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfa4490>]}
+[0m13:32:47.712181 [info ] [Thread-6 (]: 7 of 9 OK created sql view model dbt_staging.stg_merchantcomphub__qc_decision_procedure_review  [[32mSUCCESS 1[0m in 1.90s]
+[0m13:32:47.712738 [debug] [Thread-6 (]: Finished running node model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review
+[0m13:32:47.928900 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b7f9c90>]}
+[0m13:32:47.930413 [info ] [Thread-4 (]: 5 of 9 OK created sql view model dbt_staging.stg_merchantcomphub__qc_decision .. [[32mSUCCESS 1[0m in 2.40s]
+[0m13:32:47.931316 [debug] [Thread-4 (]: Finished running node model.compliance_data.stg_merchantcomphub__qc_decision
+[0m13:32:48.374123 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.716 seconds
+[0m13:32:48.376722 [debug] [Thread-3 (]: On model.compliance_data.stg_merchantcomphub__qc_dispute: Close
+[0m13:32:48.814085 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cb358d0>]}
+[0m13:32:48.815410 [info ] [Thread-3 (]: 8 of 9 OK created sql view model dbt_staging.stg_merchantcomphub__qc_dispute ... [[32mSUCCESS 1[0m in 2.17s]
+[0m13:32:48.816289 [debug] [Thread-3 (]: Finished running node model.compliance_data.stg_merchantcomphub__qc_dispute
+[0m13:32:48.896409 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.680 seconds
+[0m13:32:48.901718 [debug] [Thread-5 (]: On model.compliance_data.stg_merchantcomphub__qc_question_answer: Close
+[0m13:32:49.297936 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '10028fa0-25a0-43c4-9982-1b9c74cea387', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cfac050>]}
+[0m13:32:49.299475 [info ] [Thread-5 (]: 9 of 9 OK created sql view model dbt_staging.stg_merchantcomphub__qc_question_answer  [[32mSUCCESS 1[0m in 2.09s]
+[0m13:32:49.300388 [debug] [Thread-5 (]: Finished running node model.compliance_data.stg_merchantcomphub__qc_question_answer
+[0m13:32:49.302229 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:32:49.302822 [debug] [MainThread]: Connection 'model.compliance_data.stg_merchantcomphub__qc_dispute' was properly closed.
+[0m13:32:49.303739 [debug] [MainThread]: Connection 'model.compliance_data.stg_merchantcomphub__qc_decision' was properly closed.
+[0m13:32:49.304193 [debug] [MainThread]: Connection 'model.compliance_data.stg_merchantcomphub__qc_question_answer' was properly closed.
+[0m13:32:49.304601 [debug] [MainThread]: Connection 'model.compliance_data.stg_merchantcomphub__qc_decision_procedure_review' was properly closed.
+[0m13:32:49.305153 [info ] [MainThread]: 
+[0m13:32:49.305622 [info ] [MainThread]: Finished running 9 view models in 0 hours 0 minutes and 9.43 seconds (9.43s).
+[0m13:32:49.307699 [debug] [MainThread]: Command end result
+[0m13:32:49.341290 [info ] [MainThread]: 
+[0m13:32:49.341705 [info ] [MainThread]: [31mCompleted with 3 errors and 0 warnings:[0m
+[0m13:32:49.341921 [info ] [MainThread]: 
+[0m13:32:49.342167 [error] [MainThread]:   Database Error in model square_notary_assignment_status_details (models/intermediate/notary/square_notary_assignment_status_details.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 121 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/intermediate/notary/square_notary_assignment_status_details.sql
+[0m13:32:49.342358 [info ] [MainThread]: 
+[0m13:32:49.342587 [error] [MainThread]:   Database Error in model square_quality_assurance_case_decision_scd (models/intermediate/quality assurance/square_quality_assurance_case_decision_scd.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 127 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/intermediate/quality assurance/square_quality_assurance_case_decision_scd.sql
+[0m13:32:49.342771 [info ] [MainThread]: 
+[0m13:32:49.342986 [error] [MainThread]:   Database Error in model square_quality_assurance_case_details (models/marts/quality assurance/square_quality_assurance_case_details.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 146 at position 0 unexpected ';'.
+  compiled Code at target/run/compliance_data/models/marts/quality assurance/square_quality_assurance_case_details.sql
+[0m13:32:49.343241 [info ] [MainThread]: 
+[0m13:32:49.343485 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=3 SKIP=0 TOTAL=9
+[0m13:32:49.344539 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 10.068085, "process_user_time": 1.830334, "process_kernel_time": 0.33356, "process_mem_max_rss": "150405120", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:32:49.344916 [debug] [MainThread]: Command `dbt run` failed at 13:32:49.344864 after 10.07 seconds
+[0m13:32:49.345195 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d60150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1011bd9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e4ebd0>]}
+[0m13:32:49.345423 [debug] [MainThread]: Flushing usage events

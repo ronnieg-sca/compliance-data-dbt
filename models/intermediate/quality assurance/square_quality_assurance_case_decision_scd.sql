@@ -121,4 +121,3 @@ final AS (
 		business_current_flag
 )
 SELECT * FROM final
-;

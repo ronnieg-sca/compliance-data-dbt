@@ -115,4 +115,3 @@ final AS (
 		assignment_status_details
 )
 SELECT * FROM final
-;
